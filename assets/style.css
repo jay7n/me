@@ -1,0 +1,40 @@
+html, body {
+    /*height: 100%;*/
+    margin:0px;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'patrickhandsc-regular-webfont';
+    src: url('fonts/patrickhandsc-regular-webfont.eot'); /* IE9 Compat Modes */
+    src: url('fonts/patrickhandsc-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/patrickhandsc-regular-webfont.woff') format('woff'), /* Modern Browsers */
+         url('fonts/patrickhandsc-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/patrickhandsc-regular-webfont.svg#patrickhandsc-regular-webfont') format('svg'); /* Legacy iOS */
+}
+
+#header {
+    padding: 50px 10px 100px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#md {
+    font-family: " Helvetica", "Arial", "黑体","Microsoft YaHei","宋体",sans-serif;
+}
+
+.cn-md {
+    font-size: small;
+}
+
+.en-md {
+    font-size: small;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
