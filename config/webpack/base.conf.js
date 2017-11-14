@@ -18,6 +18,7 @@ module.exports = (function() {
             alias: {
                 '@': path.resolve(Conf.RootPath, 'source'),
                 'vue.es': path.resolve(Conf.RootPath, 'node_modules', 'vue', 'dist', 'vue.esm.js'),
+                'vue-router.es': path.resolve(Conf.RootPath, 'node_modules', 'vue-router', 'dist', 'vue-router.esm.js'),
             },
         },
         module: {

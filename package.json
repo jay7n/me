@@ -65,6 +65,7 @@
     "urijs": "^1.18.12",
     "vue": "^2.5.3",
     "vue-js-toggle-button": "^1.2.0",
+    "vue-router": "^3.0.1",
     "whatwg-fetch": "^2.0.3"
   }
 }

@@ -15,7 +15,7 @@ const MdComp = {
                     <button>download</button>
                 </div>
                 <transition name="fade" mode="out-in">
-                    <div :key="mdRes.name" id="md" :class="mdClass" v-html="html"></div>
+                    <div :key="transitionKey" id="md" :class="mdClass" v-html="html"></div>
                 </transition>
             </div>
             <div v-else>
@@ -23,33 +23,28 @@ const MdComp = {
             </div>
         `,
     props: {
-        // {
-        //     name: 'default-en',
-        //     url: '',
-        // },
-        mdEnRes: Object,
-        // {
-        //     name: 'default-cn',
-        //     url: '',
-        // },
-        mdCnRes: Object,
+        mdEnRes: String,
+        mdCnRes: String,
     },
     data() {
         return {
-            cnLang: true,
-            html: ''
+            cnLang: false,
+            html: '',
+            transitionKey: 0,
         }
     },
     computed: {
         xMdEnRes() {
-            return this.mdEnRes ? Object.assign({
+            return this.mdEnRes ? {
+                url: this.mdEnRes,
                 bodyScrollHeight: -1,
-            }, this.mdEnRes) : null
+            } : null
         },
         xMdCnRes() {
-            return this.mdCnRes ? Object.assign({
+            return this.mdCnRes ? {
+                url: this.mdCnRes,
                 bodyScrollHeight: -1,
-            }, this.mdCnRes) : null
+            } : null
         },
         mdRes() {
             if (this.xMdEnRes && this.xMdCnRes) {
@@ -61,6 +56,16 @@ const MdComp = {
         mdClass() {
             return this.cnLang ? 'cn-md' : 'en-md'
         },
+    },
+    watch: {
+        mdRes(newv, oldv) {
+            this.transitionKey = Math.random()
+            this.onRendered()
+
+            const audio = new Audio(underPath.assets('pageturn.wav'))
+            audio.load()
+            audio.play()
+        }
     },
     methods: {
         onRendered() {
@@ -89,17 +94,14 @@ const MdComp = {
             return this.cnLang ? '加载中...' : 'LOADING...'
         },
         pageTurn() {
-            const audio = new Audio(underPath.assets('pageturn.wav'))
-            audio.load()
-            audio.play()
+            // const audio = new Audio(underPath.assets('pageturn.wav'))
+            // audio.load()
+            // audio.play()
         }
     },
     mounted() {
         this.onRendered()
     },
-    updated() {
-        this.onRendered()
-    }
 }
 
 module.exports = MdComp
