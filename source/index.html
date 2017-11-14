@@ -35,26 +35,29 @@
         </style>
         <script>
             window.addEventListener('message', function(event) {
+                var $loadingme = document.getElementById('loadingme');
+                $loadingme.style.display = 'none';
+
                 if (event.data.type == 'onMarkdownContentFullyLoaded') {
-                    let embed = document.getElementsByTagName('embed')
-                    embed = embed && embed.length > 0 ? embed[0] : null
+                    var embed = document.getElementsByTagName('object');
+                    embed = embed && embed.length > 0 ? embed[0] : null;
 
                     if (embed) {
-                        const height = event.data.height + 10
-                        embed.style.height =  height + 'px'
+                        var height = event.data.height + 10;
+                        embed.style.height =  height + 'px';
                     }
 
-                    const $shell = document.getElementById('shell')
+                    var $shell = document.getElementById('shell');
                     $shell.style.border = 'solid 1px';
                     $shell.style.borderRadius = '10px';
                 }
             })
-
         </script>
     </head>
     <body>
         <div id="shell">
-            <embed src="./app.html" width="100%" height="100%">
+            <object data="./app.html" style="width:100%; height:100%;"></object>
+            <div id="loadingme">...L.O.A.D.I.N.G...</div>
         </div>
     </body>
 

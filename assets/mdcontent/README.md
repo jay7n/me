@@ -58,6 +58,8 @@ _Tech involved: C/C++, Python, Maxscript, Scintilla editing component._
 
 * Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#3dsmax_adsk_1)
 
+* Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMore('WORKEXP.md#3dsmax_adsk_1'))
+
 * Translated _Maxscript_'s ["Context Expressions"](http://help.autodesk.com/view/3DSMAX/2016/ENU/?guid=__files_GUID_E672728A_EE15_4197_9EDD_487781167B01_htm) to the _Python_'s counterpart using its "with-yield" statement. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#3dsmax_adsk_2)
 
 And,

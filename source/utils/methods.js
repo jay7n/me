@@ -5,7 +5,7 @@ import 'whatwg-fetch'
 import { appRoot } from '@/utils/consts'
 
 function _markdownAssetToHtml(mdUrl) {
-    return fetch(underPath.assets(mdUrl))
+    return fetch(mdUrl)
         .then(response => response.text())
         .then(mdContent => {
             const mdConverter = new showdown.Converter()
@@ -19,7 +19,7 @@ function _markdownAssetArrayToHtml(mdUrls) {
     const promises = []
 
     mdUrls.map(url => {
-        const p = fetch(underPath.assets(url))
+        const p = fetch(url)
             .then(response => response.text())
             .then(mdContent => {
                 const mdConverter = new showdown.Converter()
