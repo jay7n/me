@@ -3,7 +3,9 @@ import VueRouter from 'vue-router.es'
 import ToggleButton from 'vue-js-toggle-button'
 
 import MarkDownComp from '@/md.comp'
-import { underPath } from '@/utils/methods'
+import { underPath, pageTurningAudio } from '@/utils/methods'
+
+pageTurningAudio.load()
 
 Vue.use(ToggleButton)
 Vue.use(VueRouter)
@@ -38,38 +40,14 @@ function main() {
         router: router,
     })
 
-    console.log(app)
-
-
-    // const app = new Vue({
-    //     el: '#app',
-    //     template: `
-    //         <router-view></router-view>
-    //         <markdown-comp :md-en-res='mdEnRes' :md-cn-res='mdCnRes'>
-    //         </markdown-comp>
-    //     `,
-    //     components: {
-    //         'markdown-comp': MarkDownComp,
-    //     },
-    //     data: {
-    //         mdCnRes: {
-    //             name: 'entry-cn',
-    //             url: underPath.assets('mdcontent/README_CN.md'),
-    //         },
-    //         mdEnRes: {
-    //             name: 'entry-en',
-    //             url: underPath.assets('mdcontent/README.md'),
-    //         },
-    //     }
-    // })
-
     window.ReadMore = function ReadMore(mdLink) {
+        // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
+        pageTurningAudio.play()
+
         app.$router.push({
             path: `/${mdLink}`,
         })
     }
-
-    window.app = app
 }
 
 main()

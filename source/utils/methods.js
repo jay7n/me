@@ -47,3 +47,13 @@ export const underPath = {
         return `${appRoot}/assets/${sp}`
     }
 }
+
+export const pageTurningAudio = {
+    audio: new Audio(underPath.assets('pageturn.wav')),
+    load() {
+        pageTurningAudio.audio.load()
+    },
+    play() {
+        pageTurningAudio.audio.play()
+    }
+}

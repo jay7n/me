@@ -1,4 +1,4 @@
-import { markdownAssetToHtml, underPath } from '@/utils/methods'
+import { markdownAssetToHtml, underPath, pageTurningAudio } from '@/utils/methods'
 
 const MdComp = {
     template: `
@@ -61,13 +61,12 @@ const MdComp = {
         mdRes(newv, oldv) {
             this.transitionKey = Math.random()
             this.onRendered()
-
-            const audio = new Audio(underPath.assets('pageturn.wav'))
-            audio.load()
-            audio.play()
         }
     },
     methods: {
+        initAudio() {
+            return
+        },
         onRendered() {
             markdownAssetToHtml(this.mdRes.url).then((html) => this.html = html)
 
@@ -94,9 +93,8 @@ const MdComp = {
             return this.cnLang ? '加载中...' : 'LOADING...'
         },
         pageTurn() {
-            // const audio = new Audio(underPath.assets('pageturn.wav'))
-            // audio.load()
-            // audio.play()
+            // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
+            pageTurningAudio.play()
         }
     },
     mounted() {
