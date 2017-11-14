@@ -14,7 +14,7 @@ const MdComp = {
                     <div v-else id="switch-button"></div>
                     <button>download</button>
                 </div>
-                <transition name="fade" mode="out-in">
+                <transition name="fade" mode="out-in" @enter="enterTransition">
                     <div :key="transitionKey" id="md" :class="mdClass" v-html="html"></div>
                 </transition>
             </div>
@@ -25,6 +25,7 @@ const MdComp = {
     props: {
         mdEnRes: String,
         mdCnRes: String,
+        hash: String,
     },
     data() {
         return {
@@ -95,6 +96,12 @@ const MdComp = {
         pageTurn() {
             // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
             pageTurningAudio.play()
+        },
+        enterTransition(el, done) {
+            if (this.hash) {
+                window.location.replace('#' + this.hash)
+            }
+            done()
         }
     },
     mounted() {

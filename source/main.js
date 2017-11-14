@@ -13,17 +13,19 @@ Vue.use(VueRouter)
 function main() {
     const routes = [
         {
-            path: '/:md?',
+            path: '/:url?/:hash?',
             component: MarkDownComp,
             props(route) {
                 if (route.path == '/') {
                     return {
                         mdEnRes: underPath.assets('mdcontent/README.md'),
                         mdCnRes: underPath.assets('mdcontent/README_CN.md'),
+                        hash: route.params.hash,
                     }
                 } else {
                     return {
-                        mdEnRes: underPath.assets(`mdcontent/${route.params.md}`),
+                        mdEnRes: underPath.assets(`mdcontent/${route.params.url}`),
+                        hash: route.params.hash,
                     }
                 }
             },
@@ -44,8 +46,10 @@ function main() {
         // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
         pageTurningAudio.play()
 
+        const [url, hash] = mdLink.split('#')
+
         app.$router.push({
-            path: `/${mdLink}`,
+            path: `/${url}/${hash}`,
         })
     }
 }
