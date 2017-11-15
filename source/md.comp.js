@@ -26,11 +26,13 @@ const MdComp = {
         mdEnRes: String,
         mdCnRes: String,
         hash: String,
+        onScrollHeightUpdated: Function,
     },
     data() {
         return {
             cnLang: false,
             html: '',
+            htmlReady: false,
             transitionKey: 0,
         }
     },
@@ -38,13 +40,13 @@ const MdComp = {
         xMdEnRes() {
             return this.mdEnRes ? {
                 url: this.mdEnRes,
-                bodyScrollHeight: -1,
+                scrollHeight: -1,
             } : null
         },
         xMdCnRes() {
             return this.mdCnRes ? {
                 url: this.mdCnRes,
-                bodyScrollHeight: -1,
+                scrollHeight: -1,
             } : null
         },
         mdRes() {
@@ -61,34 +63,29 @@ const MdComp = {
     watch: {
         mdRes(newv, oldv) {
             this.transitionKey = Math.random()
-            this.onRendered()
+            this.renderHtml()
         }
     },
     methods: {
         initAudio() {
             return
         },
-        onRendered() {
-            markdownAssetToHtml(this.mdRes.url).then((html) => this.html = html)
+        renderHtml() {
+            this.htmlReady = false
+            return markdownAssetToHtml(this.mdRes.url).then((html) => {
+                this.html = html
+                this.htmlReady = true
+            })
+        },
+        updateScrollHeight() {
+            if (this.mdRes.scrollHeight == -1 && this.html != '') {
+                const height = this.$el.scrollHeight
 
-            window.setTimeout(() => {
-                if (this.mdRes.bodyScrollHeight == -1 && this.html != '') {
-                    const body = document.body,
-                        html = document.documentElement
-
-                    const height = Math.max( body.scrollHeight, body.offsetHeight,
-                        html.clientHeight, html.scrollHeight, html.offsetHeight )
-
-                    this.mdRes.bodyScrollHeight = height
-                }
-
-                if (this.mdRes.bodyScrollHeight != -1) {
-                    parent.postMessage({
-                        type: 'onMarkdownContentFullyLoaded',
-                        height: this.mdRes.bodyScrollHeight,
-                    }, '*')
-                }
-            }, 500)
+                this.mdRes.scrollHeight = height
+            }
+            if (this.mdRes.scrollHeight != -1 && this.onScrollHeightUpdated) {
+                this.onScrollHeightUpdated(this.mdRes.scrollHeight)
+            }
         },
         getLoadingHtml() {
             return this.cnLang ? '加载中...' : 'LOADING...'
@@ -97,15 +94,16 @@ const MdComp = {
             // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
             pageTurningAudio.play()
         },
-        enterTransition(el, done) {
+        enterTransition() {
+            // this is damn saving my life
             if (this.hash) {
                 window.location.replace('#' + this.hash)
             }
-            done()
+            this.updateScrollHeight()
         }
     },
     mounted() {
-        this.onRendered()
+        this.renderHtml().then(this.updateScrollHeight)
     },
 }
 

@@ -32,9 +32,33 @@ html, body {
     font-size: small;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .2s
+/*.fade-enter {
+    -webkit-animation: 1s fade forwards;
+    animation: 1s fade forwards;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-leave {
+    animation: fade 1s reverse;
+    -webkit-animation: fade 1s reverse;
+}*/
+
+/*@@keyframes fade {
+    0%: { opacity: 0; }
+    100%: { opacity: 1; }
+}
+
+@-webkit-keyframes fade {
+    0%: { opacity: 0; }
+    100%: { opacity: 1; }
+}*/
+.fade-enter-active{
+  transition: opacity 1s;
+}
+
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to  {
   opacity: 0
 }
