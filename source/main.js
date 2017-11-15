@@ -1,14 +1,10 @@
 import Vue from 'vue.es'
-import VueRouter from 'vue-router.es'
-import ToggleButton from 'vue-js-toggle-button'
 
 import { pageTurningAudio } from '@/utils/methods'
 import {Router, MDRouteQueue} from '@/router'
 
 pageTurningAudio.load()
 
-Vue.use(ToggleButton)
-Vue.use(VueRouter)
 
 function main() {
     const app = new Vue({
@@ -29,17 +25,9 @@ function main() {
             scrollTop: window.top.document.body.scrollTop
         })
 
-        const [url, hash] = mdLink.split('#')
-        let path = `${rootPath}/${url}`
-
-        if (hash) {
-            path += `?hash=${hash}`
-        }
-
         app.$router.push({
-            path,
+            path: `${rootPath}/${mdLink}`,
         })
-
     }
 
     window.onpopstate = () => {

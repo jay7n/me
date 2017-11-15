@@ -1,17 +1,23 @@
+import Vue from 'vue.es'
+import ToggleButton from 'vue-js-toggle-button'
+
 import { markdownAssetToHtml, underPath, pageTurningAudio } from '@/utils/methods'
+
+Vue.use(ToggleButton)
 
 const MdComp = {
     template: `
             <div v-if="mdRes" id="app">
                 <div id="header">
-                    <toggle-button v-if="xMdCnRes && xMdEnRes" id="switch-button"
-                        v-model="cnLang"
+                    <toggle-button id="switch-button"
+                        :value="xCNLang"
+                        :sync="true"
+                        :disabled="!!((mdEnRes && !mdCnRes) || (!mdEnRes && mdCnRes))"
                         :labels="{checked: 'CN', unchecked: 'EN'}"
                         :color="{checked: 'rgb(206,17,38)', unchecked: 'rgb(0, 43, 127)'}"
                         :width="65" :height="28.6"
-                        @change="pageTurn()"
+                        @change="pageTurn"
                     />
-                    <div v-else id="switch-button"></div>
                     <button>download</button>
                 </div>
                 <transition name="fade" mode="out-in" @enter="enterTransition">
@@ -25,11 +31,13 @@ const MdComp = {
     props: {
         mdEnRes: String,
         mdCnRes: String,
+        lang: String,
         hash: String,
         onScrollHeightUpdated: Function,
     },
     data() {
         return {
+            dataLang: 'en',
             cnLang: false,
             html: '',
             htmlReady: false,
@@ -49,6 +57,15 @@ const MdComp = {
                 url: this.mdCnRes,
                 scrollHeight: -1,
             } : null
+        },
+        xCNLang() {
+            let cnLang = false
+            if (this.lang != null) {
+                cnLang = (this.lang == 'cn')
+            } else {
+                cnLang = this.cnLang
+            }
+            return cnLang
         },
         mdRes() {
             return Object.assign({}, this.xMdEnRes, this.xMdCnRes)
@@ -103,9 +120,10 @@ const MdComp = {
         getLoadingHtml() {
             return this.cnLang ? '加载中...' : 'LOADING...'
         },
-        pageTurn() {
+        pageTurn({value}) {
             // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
             pageTurningAudio.play()
+            this.cnLang = !!value
         },
         enterTransition() {
             // this is damn saving my life

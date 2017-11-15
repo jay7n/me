@@ -1,8 +1,11 @@
+import Vue from 'vue.es'
 import VueRouter from 'vue-router.es'
 import _ from 'lodash'
 
 import MarkDownComp from '@/md.comp'
 import { underPath } from '@/utils/methods'
+
+Vue.use(VueRouter)
 
 export const MDRouteQueue = Object.create({
     init() {
@@ -51,13 +54,20 @@ const routes = [
                     mdCnRes: underPath.assets('mdcontent/README_CN.md'),
                 }
             } else {
+                let mdResKey = ''
+                if (route.query.lang == 'cn') {
+                    mdResKey = 'mdCnRes'
+                } else if (route.query.lang == 'en') {
+                    mdResKey = 'mdEnRes'
+                }
                 props = {
-                    mdEnRes: underPath.assets(`mdcontent/${route.params.url}`),
+                    [mdResKey]: underPath.assets(`mdcontent/${route.params.url}`),
                 }
             }
 
             return Object.assign({
                 hash: route.query.hash,
+                lang: route.query.lang,
                 onScrollHeightUpdated() {
                     const current = MDRouteQueue.current()
                     if (current && current.scrollTop) {
@@ -67,17 +77,9 @@ const routes = [
                         window.top.document.body.scrollTop = 0
                     }
 
-                    // if (route.meta.appRootScrollTop && route.meta.direction == 'toRoot') {
-                    //     window.top.document.body.scrollTop = route.meta.appRootScrollTop
-                    //     route.meta.appRootScrollTop = null // reset
-                    // }
                 }
             }, props)
         },
-        // meta: {
-        //     appRootScrollTop: null,
-        //     direction: null, // 'fromRoot', 'toRoot'
-        // }
     }
 ]
 
@@ -110,17 +112,6 @@ Router.beforeEach((to, from, next) => {
         MDRouteQueue.back()
         console.log('pop!')
     }
-    // const fromRoot = from.fullPath == '/app.html' &&
-    // to.fullPath != '/' && to.fullPath != '/app.html'
-    // const toRoot = to.fullPath == '/app.html' &&
-    // from.fullPath != '/' && from.fullPath != '/app.html'
-    //
-    // if (fromRoot) {
-    //     to.meta.direction = 'fromRoot'
-    //     to.meta.appRootScrollTop =  window.top.document.body.scrollTop
-    // } else if (toRoot) {
-    //     to.meta.direction = 'toRoot'
-    // }
 
     next()
 })
