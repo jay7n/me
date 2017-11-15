@@ -3,7 +3,7 @@ import VueRouter from 'vue-router.es'
 import ToggleButton from 'vue-js-toggle-button'
 
 import { pageTurningAudio } from '@/utils/methods'
-import Router from '@/router'
+import {Router, MDRouteQueue} from '@/router'
 
 pageTurningAudio.load()
 
@@ -19,15 +19,27 @@ function main() {
         router: Router,
     })
 
+    const rootPath = app.$router.currentRoute.fullPath
+
     window.ReadMore = function ReadMore(mdLink) {
         // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
         pageTurningAudio.play()
 
+        MDRouteQueue.truncateAndpush({
+            scrollTop: window.top.document.body.scrollTop
+        })
+
         const [url, hash] = mdLink.split('#')
+        let path = `${rootPath}/${url}`
+
+        if (hash) {
+            path += `?hash=${hash}`
+        }
 
         app.$router.push({
-            path: `/${url}/${hash}`,
+            path,
         })
+
     }
 
     window.onpopstate = () => {

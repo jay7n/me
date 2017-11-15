@@ -34,6 +34,7 @@ const MdComp = {
             html: '',
             htmlReady: false,
             transitionKey: 0,
+            changeSource: null,
         }
     },
     computed: {
@@ -50,11 +51,7 @@ const MdComp = {
             } : null
         },
         mdRes() {
-            if (this.xMdEnRes && this.xMdCnRes) {
-                return this.cnLang ? this.xMdCnRes : this.xMdEnRes
-            } else {
-                return this.xMdEnRes || this.xMdCnRes
-            }
+            return Object.assign({}, this.xMdEnRes, this.xMdCnRes)
         },
         mdClass() {
             return this.cnLang ? 'cn-md' : 'en-md'
@@ -64,27 +61,43 @@ const MdComp = {
         mdRes(newv, oldv) {
             this.transitionKey = Math.random()
             this.renderHtml()
+            this.changeSource = 'props'
+        },
+        cnLang(newv, oldv) {
+            this.transitionKey = Math.random()
+            this.renderHtml()
+            this.changeSource = 'lang'
         }
     },
     methods: {
-        initAudio() {
-            return
+        getMdRes() {
+            if (this.xMdEnRes && this.xMdCnRes) {
+                return this.cnLang ? this.xMdCnRes : this.xMdEnRes
+            } else {
+                return this.xMdEnRes || this.xMdCnRes
+            }
         },
         renderHtml() {
             this.htmlReady = false
-            return markdownAssetToHtml(this.mdRes.url).then((html) => {
+            return markdownAssetToHtml(this.getMdRes().url).then((html) => {
                 this.html = html
                 this.htmlReady = true
             })
         },
         updateScrollHeight() {
-            if (this.mdRes.scrollHeight == -1 && this.html != '') {
-                const height = this.$el.scrollHeight
-
-                this.mdRes.scrollHeight = height
+            if (this.getMdRes().scrollHeight == -1 && this.html != '') {
+                this.getMdRes().scrollHeight = this.$el.scrollHeight
             }
-            if (this.mdRes.scrollHeight != -1 && this.onScrollHeightUpdated) {
-                this.onScrollHeightUpdated(this.mdRes.scrollHeight)
+            if (this.getMdRes().scrollHeight != -1 && this.onScrollHeightUpdated) {
+                window.parent.postMessage({
+                    type: 'onMarkdownContentFullyLoaded',
+                    height: this.getMdRes().scrollHeight
+                }, '*')
+
+                if (this.changeSource != 'lang') {
+                    this.onScrollHeightUpdated()
+                    this.changeSource = null // reset
+                }
             }
         },
         getLoadingHtml() {
