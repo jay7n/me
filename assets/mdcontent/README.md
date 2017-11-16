@@ -1,3 +1,5 @@
+  <a href="" target="_blank" __>  </a>
+
 # YOUCHUN LI
 
 ## ABOUT ME
@@ -5,15 +7,15 @@ Youchun Li, (or Jayson Li in English),
 was born on Jan 9th, 1985,  
 and lives in Shanghai, China.  
 
-* jay7n.li@outlook.com
-* [github.com/jay7n](https://github.com/jay7n)
-* [www.cnblogs.com/lookof](http://www.cnblogs.com/lookof)
-* +86 13761843450
+* <a href="http://blog.liyo.site" target="_blank" __> blog.liyo.site </a>
+* <a href="http://github.com/jay7n" target="_blank" __> github.com/jay7n </a>
+* <a href="email:jay7n.li@outlook.com"> jay7n.li@outlook.com </a>
+* <a href="tel:+8613761843450"> +86 13761843450 </a>
 
 
 ## EDUCATION
 * Bachelor of Computer Since and Technology,  
-  [Hunan Institute Of Science And Technology](http://www.hnist.cn)  
+  <a href="http://www.hnist.cn" target="_blank" __> Hunan Institute Of Science And Technology </a>
   _graduated in Jun, 2009_
 
 * Language Certificate:
@@ -56,11 +58,9 @@ _Tech involved: Javascript(ES6), React, Redux, Lua, Webpack, KRPano_
 _2015.4 - 2016.2_  
 _Tech involved: C/C++, Python, Maxscript, Scintilla editing component._
 
-* Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#3dsmax_adsk_1)
-
 * Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_1'))
 
-* Translated _Maxscript_'s ["Context Expressions"](http://help.autodesk.com/view/3DSMAX/2016/ENU/?guid=__files_GUID_E672728A_EE15_4197_9EDD_487781167B01_htm) to the _Python_'s counterpart using its "with-yield" statement. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#3dsmax_adsk_2)
+* Translated _Maxscript_'s <a href="http://help.autodesk.com/view/3DSMAX/2016/ENU/?guid=__files_GUID_E672728A_EE15_4197_9EDD_487781167B01_htm" target="_blank"> "Context Expressions" </a> to the _Python_'s counterpart using its "with-yield" statement. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_2'))
 
 And,
 
