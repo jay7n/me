@@ -115,11 +115,9 @@ Router.beforeEach((to, from, next) => {
     const depthFrom = _.without(from.fullPath.split('/'), '').length
 
     if (depthTo > depthFrom) { // a push move
-        console.log('push!')
         MDRouteQueue.go()
     } else { // a pop move
         MDRouteQueue.back()
-        console.log('pop!')
     }
 
     next()
