@@ -1,4 +1,4 @@
-  <a href="" target="_blank" __>  </a>
+ <a href="" target="_blank" __>  </a>
 
 # YOUCHUN LI
 
@@ -36,9 +36,9 @@ and lives in Shanghai, China.
 * Exploring WebGL and PlayCanvas game engine (based on WebGL) in recent projects.
 * C/C++ was the main skill in past 5 years.
 * Uses _fish + atom + editor + git_ as developing toolchains.
-* Used to focus on OpenGL/DX, [general (realtime/offline) graphics knowledge](http://www.cnblogs.com/lookof/category/220911.html).
+* Used to focus on OpenGL/DX, <a href="http://www.cnblogs.com/lookof/category/220911.html" target="_blank" __> general (realtime/offline) graphics knowledge  </a>.
 * Tried AngularJS, Node, Swift Language for a while before.
-* Used to play with Tornado, MongoDB right now in my toy project: [LinWords](https://github.com/jay7n/LinWords)
+* Used to play with Tornado, MongoDB right now in my toy project: <a href="https://github.com/jay7n/LinWords" target="_blank" __> LinWords </a>
 
 
 ## WORK EXPERIENCES
@@ -70,11 +70,11 @@ And,
 _2014.4 - 2015.4_  
 _Tech involved: C#, C++, QT, Chromium-CEF, AngularJS/Bootstrap, javascript/html5/canvas/css3._
 
-* Integrated Autodesk in-house services to Stingray Editor. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#stingray_adsk_1)
+* Integrated Autodesk in-house services to Stingray Editor. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#stingray_adsk_1'))
 
-* Implemented the _Progress Bar_ widget for Stingray Editor. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#stingray_adsk_2)
+* Implemented the _Progress Bar_ widget for Stingray Editor. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#stingray_adsk_2'))
 
-* Implemented the _Color Picker_ Panel for Stingray Editor. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#stingray_adsk_3)
+* Implemented the _Color Picker_ Panel for Stingray Editor. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#stingray_adsk_3'))
 
 And,
 
@@ -84,23 +84,23 @@ And,
 _2013.10 - 2014.4_  
 _Tech involved: C++, Graphics knowledge_
 
-* Implemented Tessellation Lighting Map for Displacement Map of MayaLT. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#beast_adsk)
+* Implemented Tessellation Lighting Map for Displacement Map of MayaLT. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#beast_adsk'))
 
 #### Feature Development for Flame/Smoke, Creative Finishing Team, Autodesk.
 _2011.2 - 2013.10_  
 _Tech involved: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
 
-* Fixed a series of tangled bugs resulting from "Reeler" Widget positioning bias of Flame. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#flame_adsk_1)
+* Fixed a series of tangled bugs resulting from "Reeler" Widget positioning bias of Flame. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_1'))
 
-* Investigated a memory management issue for Flame/Smoke. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#flame_adsk_2)
+* Investigated a memory management issue for Flame/Smoke. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_2'))
 
-* Implemented _[Action Replica Node](https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/Flame/files/GUID-0E1E86A5-310B-4F1F-A9C1-97E64A896AAB-htm.html)_ for Flame. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#flame_adsk_3)
+* Implemented _[Action Replica Node](https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/Flame/files/GUID-0E1E86A5-310B-4F1F-A9C1-97E64A896AAB-htm.html)_ for Flame. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_3'))
 
 #### 3D Feature Devel for Mobile Games, 3D R&D Team, IN-FUN Corp.
 _2010.10 - 2011.2_  
 _Tech involved: C Language, a 3D game engine made in-house, Graphics knowledge._
 
-* Developed a lightweight 3D game running on a MTK mobile platform. [Read more...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#3d_infun)
+* Developed a lightweight 3D game running on a MTK mobile platform. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3d_infun'))
 
 #### Feature Devel for NetGames, Client-side Team, ShenXue Corp.
 _2010.4 - 2010.10_  
@@ -141,10 +141,10 @@ _Tech involved: C++, Ogre 3D._
 * Mac OS X / Unix-like OS fans. anti-Windows.
 * Editor(emacs/vim/sublime/atom) + Command-line(bash/fish) fans. anti-IDE.
 * Favorite sites:
-    * [github](https://github.com/),
-    * [stackoverflow](http://stackoverflow.com/),
-    * [hacker news](https://news.ycombinator.com/news),
-    * [知乎](https://www.zhihu.com/),
-    * [IPN](http://ipn.li/),
-    * [xkcd](http://xkcd.com/)
+    * <a href="https://github.com/" target="_blank" __> GitHub </a>,
+    * <a href="http://stackoverflow.com/" target="_blank" __> stackoverflow </a>,
+    * <a href="https://news.ycombinator.com/news" target="_blank" __> Hacker News </a>,
+    * <a href="https://www.zhihu.com/" target="_blank" __> 知乎 </a>,
+    * <a href="http://ipn.li/" target="_blank" __> IPN </a>,
+    * <a href="http://xkcd.com/" target="_blank" __> xkcd </a>.
 * Hobbies: working out, playing guitar, post-rock genre, meditating, exploring cities, brewing coffee.
