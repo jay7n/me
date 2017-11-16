@@ -107,7 +107,7 @@ const MdComp = {
             }
             if (this.getMdRes().scrollHeight != -1 && this.onScrollHeightUpdated) {
                 window.parent.postMessage({
-                    type: 'onMarkdownContentFullyLoaded',
+                    type: 'onMarkdownContentScrollHeightUpdated',
                     height: this.getMdRes().scrollHeight
                 }, '*')
 
@@ -127,9 +127,6 @@ const MdComp = {
         },
         enterTransition() {
             // this is damn saving my life
-            if (this.hash) {
-                window.location.replace('#' + this.hash)
-            }
             this.updateScrollHeight()
         }
     },

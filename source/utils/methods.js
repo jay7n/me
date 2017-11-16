@@ -57,3 +57,26 @@ export const pageTurningAudio = {
         pageTurningAudio.audio.play()
     }
 }
+
+export function getELementByATagName(name) {
+    const atags = document.getElementsByTagName('a')
+    for (const atag of atags) {
+        if (name == atag.getAttribute('name')) {
+            return atag
+        }
+    }
+}
+
+export function cumulativeOffset(element) {
+    let top = 0, left = 0
+    do {
+        top += element.offsetTop  || 0
+        left += element.offsetLeft || 0
+        element = element.offsetParent
+    } while(element)
+
+    return {
+        top: top,
+        left: left
+    }
+}

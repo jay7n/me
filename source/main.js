@@ -21,13 +21,22 @@ function main() {
         // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
         pageTurningAudio.play()
 
-        MDRouteQueue.truncateAndpush({
-            scrollTop: window.top.document.body.scrollTop
-        })
+        const messageHandler = function (event) {
+            if (event.data.type == 'setOutsideDocumentBodyScrollTop') {
+                MDRouteQueue.truncateAndpush({
+                    scrollTop: event.data.scrollTop
+                })
+                app.$router.push({
+                    path: `${rootPath}/${mdLink}`,
+                })
+                window.removeEventListener('message', messageHandler, true)
+            }
+        }
+        window.addEventListener('message', messageHandler, true)
 
-        app.$router.push({
-            path: `${rootPath}/${mdLink}`,
-        })
+        window.parent.postMessage({
+            type: 'getOutsideDocumentBodyScrollTop',
+        }, '*')
     }
 
     window.onpopstate = () => {

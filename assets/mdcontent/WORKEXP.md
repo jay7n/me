@@ -3,7 +3,7 @@
 _2015.4 - 2016.2_  
 _Tech involved: C/C++, Python, Maxscript, Scintilla editing component._
 
-* <a name="3dsmax_adsk_1"></a>Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported.
+* <a name="3dsmax_adsk_1">Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported.</a>
 
     > * Massive legacy max code plus haphazard Scintilla lib transplanting left me a ugly and tangled entry-point, making it difficult to wedge a new feature.
     > * There is a note explaining my work for this task, including my thoughts and concern, written in Chinese though. [Read it here](https://github.com/jay7n/abouthim/blob/master/notes/script_listener_for_python_in_3dsmax.md).

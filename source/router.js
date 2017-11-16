@@ -3,7 +3,7 @@ import VueRouter from 'vue-router.es'
 import _ from 'lodash'
 
 import MarkDownComp from '@/md.comp'
-import { underPath } from '@/utils/methods'
+import { underPath, getELementByATagName } from '@/utils/methods'
 
 Vue.use(VueRouter)
 
@@ -15,11 +15,10 @@ export const MDRouteQueue = Object.create({
         })
     },
     truncateAndpush({scrollTop}) {
-        this.history = this.history.slice(0, this.depth+1)
+        this.history = this.history.slice(0, this.depth)
         this.history.push({
             scrollTop
         })
-        this.depth++
     },
     go() {
         if (this.depth < this.history.length) {
@@ -66,17 +65,27 @@ const routes = [
             }
 
             return Object.assign({
-                hash: route.query.hash,
+                hash: route.hash,
                 lang: route.query.lang,
                 onScrollHeightUpdated() {
+                    let scrollTop = 0
+                    let relativeScroll = true
                     const current = MDRouteQueue.current()
+
                     if (current && current.scrollTop) {
-                        window.top.document.body.scrollTop = current.scrollTop
-                        // current.popped.scrollTop = null // reset
-                    } else if(!route.query.hash){
-                        window.top.document.body.scrollTop = 0
+                        scrollTop = current.scrollTop
+                        relativeScroll = false
+                    } else if(route.hash){
+                        window.getTag = getELementByATagName
+                        const $hash = getELementByATagName(route.hash.substr(1))
+                        scrollTop = $hash.offsetTop
                     }
 
+                    window.parent.postMessage({
+                        type: 'onMarkdownContentScrollTopUpdated',
+                        scrollTop,
+                        relativeScroll
+                    }, '*')
                 }
             }, props)
         },
@@ -92,7 +101,7 @@ export const Router = new VueRouter({
 
 Router.beforeEach((to, from, next) => {
     function isAReplaceJumpMove() {
-        if (to.query.hash && to.query.hash == from.query.hash) {
+        if (to.hash && to.hash == from.hash) {
             return true
         }
     }
