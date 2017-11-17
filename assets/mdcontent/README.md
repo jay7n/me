@@ -5,7 +5,8 @@
 ## ABOUT ME
 Youchun Li, (or Jayson Li in English),  
 was born on Jan 9th, 1985,  
-and lives in Shanghai, China.  
+and lives in Shanghai, China,  
+with 8 years developing experiences.
 
 * <a href="http://blog.liyo.site" target="_blank" __> blog.liyo.site </a>
 * <a href="http://github.com/jay7n" target="_blank" __> github.com/jay7n </a>
@@ -24,21 +25,21 @@ and lives in Shanghai, China.
 
 
 
-## Skill Keywords
-* Javascript(ES6), React, Redux, Vuejs, Webpack, Nodejs, Html5, Css3
-* Php, Python, MariaDB, Nginx, Linux
-* C++, C Language, Lua
-* OpenGL, WebGL, Graphics, Shader
+## SKILL SET
+* __Languages__: Javascript(ES6), Html5, Css3; Php, MariaDB; C++, C, ObjC; Shader; Lua, Python
+* __Librares__: Lodash, JQuery, WebGL; STL, OpenGL;
+* __Frameworks__:React, Redux, Vue, PlayCanvas; Node/Express, CodeIgniter; Ogre; Tornado;
+* __Tools__: Webpack; Git; Fish; Atom Editor(with vim plugin)
 
+And, a little more about EXPERTISE EXPERIENCES:
 
-## EXPERTISE/HIGHLIGHTS
-* Focusing on ES6, React/Redux/Vue, Webpack and Nodejs tech stack as the main skill set in recent 2 years.
 * Exploring WebGL and PlayCanvas game engine (based on WebGL) in recent projects.
-* C/C++ was the main skill in past 5 years.
-* Uses _fish + atom + editor + git_ as developing toolchains.
+* Focusing on ES6, React/Redux/Vue, Webpack and Nodejs tech stack as the main skill set in recent 2 years.
+* C/C++ was the main skill for past 5 years.
 * Used to focus on OpenGL/DX, <a href="http://www.cnblogs.com/lookof/category/220911.html" target="_blank" __> general (realtime/offline) graphics knowledge  </a>.
 * Tried AngularJS, Node, Swift Language for a while before.
-* Used to play with Tornado, MongoDB right now in my toy project: <a href="https://github.com/jay7n/LinWords" target="_blank" __> LinWords </a>
+* Used to play with Tornado, MongoDB in my toy project: <a href="https://github.com/jay7n/LinWords" target="_blank" __> LinWords </a>
+* Uses _Fish + Atom editor(with vim plugin) + Git_ as developing toolchains.
 
 
 ## WORK EXPERIENCES
@@ -58,7 +59,7 @@ _Tech involved: Javascript(ES6), React, Redux, Lua, Webpack, KRPano_
 _2015.4 - 2016.2_  
 _Tech involved: C/C++, Python, Maxscript, Scintilla editing component._
 
-* Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_1'))
+* Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMoreInBlank('WORKEXP.md?lang=en#3dsmax_adsk_1'))
 
 * Translated _Maxscript_'s <a href="http://help.autodesk.com/view/3DSMAX/2016/ENU/?guid=__files_GUID_E672728A_EE15_4197_9EDD_487781167B01_htm" target="_blank"> "Context Expressions" </a> to the _Python_'s counterpart using its "with-yield" statement. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_2'))
 
@@ -94,7 +95,7 @@ _Tech involved: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
 
 * Investigated a memory management issue for Flame/Smoke. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_2'))
 
-* Implemented _[Action Replica Node](https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/Flame/files/GUID-0E1E86A5-310B-4F1F-A9C1-97E64A896AAB-htm.html)_ for Flame. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_3'))
+* Implemented _<a href="https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/Flame/files/GUID-0E1E86A5-310B-4F1F-A9C1-97E64A896AAB-htm.html" target="_blank" __> Action Replica Node </a>_ for Flame. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_3'))
 
 #### 3D Feature Devel for Mobile Games, 3D R&D Team, IN-FUN Corp.
 _2010.10 - 2011.2_  
@@ -147,4 +148,4 @@ _Tech involved: C++, Ogre 3D._
     * <a href="https://www.zhihu.com/" target="_blank" __> 知乎 </a>,
     * <a href="http://ipn.li/" target="_blank" __> IPN </a>,
     * <a href="http://xkcd.com/" target="_blank" __> xkcd </a>.
-* Hobbies: working out, playing guitar, post-rock genre, meditating, exploring cities, brewing coffee.
+* Hobbies: working out, playing ukelele/drum, post-rock genre, meditating, exploring cities, brewing coffee.

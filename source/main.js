@@ -1,47 +1,58 @@
 import Vue from 'vue.es'
 
-import { pageTurningAudio } from '@/utils/methods'
+import { pageTurningAudio, crossFrameGetPostMessage, parseLoactoinHref } from '@/utils/methods'
 import {Router, MDRouteQueue} from '@/router'
 
 pageTurningAudio.load()
 
 
 function main() {
-    const app = new Vue({
-        el: '#app',
-        template: `
-            <router-view></router-view>
-        `,
-        router: Router,
-    })
+    crossFrameGetPostMessage('getOutsideWindowLocationHref', 'setOutsideWindowLocationHref')
+        .then(outsideLocationHref => {
+            const outsideLocation = parseLoactoinHref(outsideLocationHref)
 
-    const rootPath = app.$router.currentRoute.fullPath
-
-    window.ReadMore = function ReadMore(mdLink) {
-        // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
-        pageTurningAudio.play()
-
-        const messageHandler = function (event) {
-            if (event.data.type == 'setOutsideDocumentBodyScrollTop') {
-                MDRouteQueue.truncateAndpush({
-                    scrollTop: event.data.scrollTop
-                })
-                app.$router.push({
-                    path: `${rootPath}/${mdLink}`,
-                })
-                window.removeEventListener('message', messageHandler, true)
+            if (outsideLocation) {
+                window.outsideLocation = outsideLocation
             }
-        }
-        window.addEventListener('message', messageHandler, true)
 
-        window.parent.postMessage({
-            type: 'getOutsideDocumentBodyScrollTop',
-        }, '*')
-    }
+            const app = new Vue({
+                el: '#app',
+                template: '<router-view></router-view>',
+                router: Router.Create(),
+            })
 
-    window.onpopstate = () => {
-        pageTurningAudio.play()
-    }
+            let rootPath = app.$router.currentRoute.fullPath
+
+
+            window.ReadMore = function ReadMore(mdLink) {
+            // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
+                pageTurningAudio.play()
+
+                crossFrameGetPostMessage('getOutsideDocumentBodyScrollTop', 'setOutsideDocumentBodyScrollTop')
+                    .then(scrollTop => {
+                        const path = `${rootPath}/${mdLink}`
+
+                        MDRouteQueue.truncateAndpush({
+                            scrollTop
+                        })
+                        app.$router.push({
+                            path
+                        })
+                    })
+            }
+
+            window.onpopstate = () => {
+                pageTurningAudio.play()
+            }
+
+            window.ReadMoreInBlank = function ReadMoreInBlank(mdLink) {
+                crossFrameGetPostMessage('getOutsideDocumentBodyScrollTop', 'setOutsideDocumentBodyScrollTop')
+                    .then(scrollTop => {
+                        const path = `${window.location.origin}##${rootPath}/${mdLink}`
+                        window.open(path, '_blank')
+                    })
+            }
+        })
 }
 
 main()

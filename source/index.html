@@ -3,67 +3,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <title>About Me ♞</title>
-        <style>
-            html {
-                width: 100%;
-                height: 100%;
-                margin:0px;
-            }
-            body {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-            }
-
-            /*on mobile device*/
-            @media screen and (max-width:900px) {
-                #shell {
-                    width: 90vw;
-                    margin: 1vh 1vw 1vh 1vw;
-                    padding: 2vh 2vw 2vh 2vw;
-                }
-            }
-
-            /*on desktop device*/
-            @media screen and (min-width:900px) {
-                #shell {
-                    width: 55vw;
-                    margin: 10vh 10vw 10vh 10vw;
-                    padding: 5vh 5vw 5vh 5vw;
-                }
-            }
-        </style>
-        <script>
-            window.addEventListener('message', function(event) {
-                var $loadingme = document.getElementById('loadingme');
-                $loadingme.style.display = 'none';
-
-                var embed = document.getElementsByTagName('iframe');
-                embed = embed && embed.length > 0 ? embed[0] : null;
-
-                if (event.data.type == 'onMarkdownContentScrollHeightUpdated') {
-                    if (embed) {
-                        var height = event.data.height;
-                        embed.style.height =  height + 'px';
-                    }
-
-                    var $shell = document.getElementById('shell');
-                    $shell.style.border = 'solid 1px';
-                    $shell.style.borderRadius = '10px';
-                } else if (event.data.type == 'onMarkdownContentScrollTopUpdated') {
-                    document.body.scrollTop = event.data.scrollTop;
-
-                    if (event.data.relativeScroll) {
-                        document.body.scrollTop += embed.offsetTop;
-                    }
-                } else if (event.data.type == 'getOutsideDocumentBodyScrollTop') {
-                    embed.contentWindow.postMessage({
-                        type: 'setOutsideDocumentBodyScrollTop',
-                        scrollTop: document.body.scrollTop
-                    }, '*')
-                }
-            })
-        </script>
+        <link href="assets/shell.style.css" rel="stylesheet" type="text/css"/>
+        <script src="assets/windowmessage.js"></script>
     </head>
     <body>
         <div id="shell">

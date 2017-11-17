@@ -80,3 +80,32 @@ export function cumulativeOffset(element) {
         left: left
     }
 }
+
+export function crossFrameGetPostMessage(messageType, receivedMessageType) {
+    return new Promise((resolve, reject) => {
+        const messageHandler = function (event) {
+            if (event.data.type == receivedMessageType) {
+                resolve(event.data.scrollTop)
+            } else {
+                reject()
+            }
+            window.removeEventListener('message', messageHandler, true)
+        }
+        window.addEventListener('message', messageHandler, true)
+
+        window.parent.postMessage({
+            type: messageType
+        }, '*')
+    })
+}
+
+export function parseLoactoinHref(href) {
+    const pair = href.split('##')
+
+    return {
+        href,
+        origin: pair[0],
+        doublehash: pair[1],
+        consumed: false
+    }
+}

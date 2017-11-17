@@ -1,0 +1,28 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin:0px;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*on mobile device*/
+@media screen and (max-width:900px) {
+    #shell {
+        width: 90vw;
+        margin: 1vh 1vw 1vh 1vw;
+        padding: 2vh 2vw 2vh 2vw;
+    }
+}
+
+/*on desktop device*/
+@media screen and (min-width:900px) {
+    #shell {
+        width: 55vw;
+        margin: 10vh 10vw 10vh 10vw;
+        padding: 5vh 5vw 5vh 5vw;
+    }
+}

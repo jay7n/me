@@ -92,33 +92,48 @@ const routes = [
     }
 ]
 
-export const Router = new VueRouter({
-    mode: 'history',
-    history: true,
-    routes,
-    saveScrollPosition: true,
-})
+export const Router = Object.create({
+    Create() {
+        const Router = new VueRouter({
+            mode: 'history',
+            history: true,
+            routes,
+            saveScrollPosition: true,
+        })
 
-Router.beforeEach((to, from, next) => {
-    function isAReplaceJumpMove() {
-        if (to.hash && to.hash == from.hash) {
-            return true
-        }
+        Router.beforeEach((to, from, next) => {
+            const outsideLocation = window.outsideLocation
+
+            if (!outsideLocation.consumed) {
+                outsideLocation.consumed = true
+                next({
+                    path: outsideLocation.doublehash
+                })
+            }
+
+            function isAReplaceJumpMove() {
+                if (to.hash && to.hash == from.hash) {
+                    return true
+                }
+            }
+
+            if (isAReplaceJumpMove()) {
+                next()
+                return
+            }
+
+            const depthTo = _.without(to.fullPath.split('/'), '').length
+            const depthFrom = _.without(from.fullPath.split('/'), '').length
+
+            if (depthTo > depthFrom) { // a push move
+                MDRouteQueue.go()
+            } else { // a pop move
+                MDRouteQueue.back()
+            }
+
+            next()
+        })
+
+        return Router
     }
-
-    if (isAReplaceJumpMove()) {
-        next()
-        return
-    }
-
-    const depthTo = _.without(to.fullPath.split('/'), '').length
-    const depthFrom = _.without(from.fullPath.split('/'), '').length
-
-    if (depthTo > depthFrom) { // a push move
-        MDRouteQueue.go()
-    } else { // a pop move
-        MDRouteQueue.back()
-    }
-
-    next()
 })
