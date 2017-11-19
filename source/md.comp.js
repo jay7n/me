@@ -1,7 +1,10 @@
 import Vue from 'vue.es'
 import ToggleButton from 'vue-js-toggle-button'
+import hljs from 'highlightjs'
+import $ from 'jquery'
 
-import { markdownAssetToHtml, underPath, pageTurningAudio } from '@/utils/methods'
+import { markdownAssetToHtml, pageTurningAudio } from '@/utils/methods'
+import 'md.syntax.styles/agate.css'
 
 Vue.use(ToggleButton)
 
@@ -75,12 +78,12 @@ const MdComp = {
         },
     },
     watch: {
-        mdRes(newv, oldv) {
+        mdRes() {
             this.transitionKey = Math.random()
             this.renderHtml()
             this.changeSource = 'props'
         },
-        cnLang(newv, oldv) {
+        cnLang() {
             this.transitionKey = Math.random()
             this.renderHtml()
             this.changeSource = 'lang'
@@ -96,10 +99,18 @@ const MdComp = {
         },
         renderHtml() {
             this.htmlReady = false
-            return markdownAssetToHtml(this.getMdRes().url).then((html) => {
-                this.html = html
-                this.htmlReady = true
-            })
+            return markdownAssetToHtml(this.getMdRes().url)
+                .then((html) => {
+                    this.html = html
+                    this.htmlReady = true
+                })
+                .then(() => {
+                    $(document).ready(function() {
+                        $('pre').each(function(i, block) {
+                            hljs.highlightBlock(block)
+                        })
+                    })
+                })
         },
         updateScrollHeight() {
             if (this.getMdRes().scrollHeight == -1 && this.html != '') {

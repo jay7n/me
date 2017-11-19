@@ -1,9 +1,8 @@
 import Vue from 'vue.es'
 import VueRouter from 'vue-router.es'
-import _ from 'lodash'
 
 import MarkDownComp from '@/md.comp'
-import { underPath, getELementByATagName } from '@/utils/methods'
+import { underPath, getELementByATagName, without } from '@/utils/methods'
 
 Vue.use(VueRouter)
 
@@ -122,8 +121,8 @@ export const Router = Object.create({
                 return
             }
 
-            const depthTo = _.without(to.fullPath.split('/'), '').length
-            const depthFrom = _.without(from.fullPath.split('/'), '').length
+            const depthTo = without(to.fullPath.split('/'), '').length
+            const depthFrom = without(from.fullPath.split('/'), '').length
 
             if (depthTo > depthFrom) { // a push move
                 MDRouteQueue.go()

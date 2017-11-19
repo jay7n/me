@@ -1,6 +1,8 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var Visualizer = require('webpack-visualizer-plugin')
 
 var Conf = require('../conf')
 
@@ -17,8 +19,12 @@ module.exports = (function() {
             extensions: ['.js'],
             alias: {
                 '@': path.resolve(Conf.RootPath, 'source'),
+                'r': path.resolve(Conf.RootPath, 'source/resources'),
                 'vue.es': path.resolve(Conf.RootPath, 'node_modules', 'vue', 'dist', 'vue.esm.js'),
                 'vue-router.es': path.resolve(Conf.RootPath, 'node_modules', 'vue-router', 'dist', 'vue-router.esm.js'),
+                'md.syntax.styles': path.resolve(Conf.RootPath, 'node_modules', 'highlightjs', 'styles'),
+                'highlightjs': path.resolve(Conf.RootPath, 'node_modules', 'highlightjs', 'highlight.pack.min.js'),
+                'jquery': path.resolve(Conf.RootPath, 'node_modules', 'jquery', 'dist', 'jquery.slim.min.js'),
             },
         },
         module: {
@@ -51,6 +57,17 @@ module.exports = (function() {
                         limit: 10000,
                         name: 'fonts/[name].[hash:7].[ext]'
                     }
+                },
+                {
+                    test: /\.css$/,
+                    use:  ExtractTextPlugin.extract({
+                        fallback: "style-loader",
+                        use: "css-loader"
+                    })
+                },
+                {
+                    test: /\.(ogg|mp3|wav|mpe?g)$/i,
+                    use: 'file-loader'
                 }
             ],
         },
@@ -88,6 +105,9 @@ module.exports = (function() {
                 inject: false,
                 chunksSortMode: 'dependency'
             }),
+
+            new ExtractTextPlugin("styles.css"),
+            new Visualizer({filename: './statistics.html'})
         ]
     }
 

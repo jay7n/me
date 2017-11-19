@@ -59,6 +59,7 @@ _Tech involved: Javascript(ES6), React, Redux, Lua, Webpack, KRPano_
 _2015.4 - 2016.2_  
 _Tech involved: C/C++, Python, Maxscript, Scintilla editing component._
 
+* Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn'))
 * Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMoreInBlank('WORKEXP.md?lang=en#3dsmax_adsk_1'))
 
 * Translated _Maxscript_'s <a href="http://help.autodesk.com/view/3DSMAX/2016/ENU/?guid=__files_GUID_E672728A_EE15_4197_9EDD_487781167B01_htm" target="_blank"> "Context Expressions" </a> to the _Python_'s counterpart using its "with-yield" statement. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_2'))
@@ -134,13 +135,9 @@ _Tech involved: C++, Ogre 3D._
         * Lisp
         * Ruby
 
-    And,
-    * Would like work under Mac OSX / Unix-like OS.
-
 
 ## TASTE
-* Mac OS X / Unix-like OS fans. anti-Windows.
-* Editor(emacs/vim/sublime/atom) + Command-line(bash/fish) fans. anti-IDE.
+* Editor(emacs/vim/sublime/atom) + Command-line(bash/fish) fans.
 * Favorite sites:
     * <a href="https://github.com/" target="_blank" __> GitHub </a>,
     * <a href="http://stackoverflow.com/" target="_blank" __> stackoverflow </a>,

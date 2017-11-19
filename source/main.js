@@ -3,6 +3,8 @@ import Vue from 'vue.es'
 import { pageTurningAudio, crossFrameGetPostMessage, parseLoactoinHref } from '@/utils/methods'
 import {Router, MDRouteQueue} from '@/router'
 
+import '@/style.css'
+
 pageTurningAudio.load()
 
 
@@ -46,11 +48,8 @@ function main() {
             }
 
             window.ReadMoreInBlank = function ReadMoreInBlank(mdLink) {
-                crossFrameGetPostMessage('getOutsideDocumentBodyScrollTop', 'setOutsideDocumentBodyScrollTop')
-                    .then(scrollTop => {
-                        const path = `${window.location.origin}##${rootPath}/${mdLink}`
-                        window.open(path, '_blank')
-                    })
+                const path = `${window.location.origin}##${rootPath}/${mdLink}`
+                window.open(path, '_blank')
             }
         })
 }

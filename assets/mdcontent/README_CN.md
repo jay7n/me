@@ -121,13 +121,9 @@ _涉及到的技术: C++, Ogre 3D._
         * Lisp
         * Ruby
 
-    另外，
-    * 我想在Mac OS X / Unix-like OS平台下开发。
-
 
 ## 偏好
-* Mac OS X / Unix-like 粉丝。不喜欢Windows。
-* 编辑器（emacs/vim/sublime/atom）+ 命令行（bash/fish）粉丝。不喜欢IDE。
+* 编辑器（emacs/vim/sublime/atom）+ 命令行（bash/fish）粉丝。
 * 喜欢去的网站：
     * <a href="https://github.com/" target="_blank" __> GitHub </a>,
     * <a href="http://stackoverflow.com/" target="_blank" __> stackoverflow </a>,

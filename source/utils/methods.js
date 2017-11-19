@@ -4,6 +4,8 @@ import 'whatwg-fetch'
 
 import { appRoot } from '@/utils/consts'
 
+import pageturnWav from 'r/pageturn.wav'
+
 function _markdownAssetToHtml(mdUrl) {
     return fetch(mdUrl)
         .then(response => response.text())
@@ -49,7 +51,7 @@ export const underPath = {
 }
 
 export const pageTurningAudio = {
-    audio: new Audio(underPath.assets('pageturn.wav')),
+    audio: new Audio(pageturnWav),
     load() {
         pageTurningAudio.audio.load()
     },
@@ -108,4 +110,19 @@ export function parseLoactoinHref(href) {
         doublehash: pair[1],
         consumed: false
     }
+}
+
+export function without(array, ...excludedValues) {
+    const resArray = array.slice(0)
+
+    for (const exVal of excludedValues) {
+        for (const [idx, val] of resArray.entries()) {
+            if (val === exVal) {
+                resArray.splice(idx, 1)
+                break
+            }
+        }
+    }
+
+    return resArray
 }
