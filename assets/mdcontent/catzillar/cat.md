@@ -1,3 +1,5 @@
+<a href="" target="_blank" __>  </a>
+
 # Catzillar全景图项目开发文档
 _版本：1.0_
 _2017.4.1_
@@ -13,11 +15,11 @@ _2017.4.1_
 这个描述似乎有些干枯。那么就稍微展开一些。
 
 ### 前提：krpano是什么
-了解Catzillar之前，有必要先了解一下它所根植的土壤：krpano ( [krpano是什么？](krpano.com) )。简单地说，如果你有一套krpano，就能制作自己的全景图，并放在前端浏览器中浏览。你可以进一步将它作为一个网站，更好地与后端进行整合。
+了解Catzillar之前，有必要先了解一下它所根植的土壤：krpano ( <a href="https://krpano.com" target="_blank" __> krpano是什么？ </a>)。简单地说，如果你有一套krpano，就能制作自己的全景图，并放在前端浏览器中浏览。你可以进一步将它作为一个网站，更好地与后端进行整合。
 
-krpano也提供了强大的开发工具包，可以作为一个面向开发者的平台，供你从各个方面定制、强化全景图前端浏览的功能。[一些例子](https://krpano.com/examples/)
+krpano也提供了强大的开发工具包，可以作为一个面向开发者的平台，供你从各个方面定制、强化全景图前端浏览的功能。<a href="https://krpano.com/examples/" target="_blank" __> 一些例子 </a>
 
-krpano利用xml设计了一套属于自己的DSL([DSL是什么？](https://en.wikipedia.org/wiki/Domain-specific_language))。你只要按照它的[文档中定义的语法规则](https://krpano.com/docu/)，撰写你的xml代码，它的js引擎就能够驱动这些代码，展示出相应的效果。
+krpano利用xml设计了一套属于自己的DSL(<a href="https://en.wikipedia.org/wiki/Domain-specific_language" target="_blank" __> DSL是什么？ </a>)。你只要按照它的<a href="https://krpano.com/docu/" target="_blank" __> 文档中定义的语法规则 </a>，撰写你的xml代码，它的js引擎就能够驱动这些代码，展示出相应的效果。
 
 ### krpano看上去已经很棒了，那我们为何还要打造Catzillar？
 krpano之于我们的问题在于，它提供的功能粒度太过灵活和琐碎。它的工具包很适合用来创造某一个具体的全景图项目；然而，对于全景图许多功能的模块化管理/复用等方面，它显得力不从心。
@@ -43,11 +45,11 @@ _helloworld.tmpl.xml_
 </rp_tmpl>    
 ```
 
-`<rp_tmpl>`是一个可以被Catzillar模板编译器读取识别的特殊标签。配以`name`的标签属性，即表示要定义一个模板。`rp_tmpl`标签的字面含义是：**r**ay**p**ano_**templ**ate。
+`<rp_tmpl>`是一个可以被Catzillar模板编译器读取识别的特殊标签。配以`name`的标签属性，即表示要定义一个模板。`rp_tmpl`标签的字面含义是：**r**ay **p**ano _ **t** e **mpl** ate。
 
 我们需要将一个“模板定义”写在一个文件里。这个文件的名字模式有一定的要求：它应该是“[xxxxx].tmpl.xml”的形式。后缀名“tmpl”也表达了这是一个模板的含义（template）。注意，一个文件只允许定义一个模板。
 
-这里，我们要定义一个名为”hello-world“的模板。其内容就是这个标签所包裹的内部代码。内部代码中的**\<action>**以及**trace()**等都是krpano的语法规则：因此这个模板要做的事情，就是在krpano的调试框中输出一个”hello world”的字符串。
+这里，我们要定义一个名为”hello-world“的模板。其内容就是这个标签所包裹的内部代码。内部代码中的`<action>`以及trace()等都是krpano的语法规则：因此这个模板要做的事情，就是在krpano的调试框中输出一个”hello world”的字符串。
 
 当我们想使用这个模板时，可以在调用端的文件中写：
 
@@ -81,18 +83,22 @@ _client.out.xml_
 ### 总结
 如果将以上的描述总结一下，那么有关Catzillar的话题会发现围绕在这几个方面：
 * 关于模板编译器自身：
-        * xml模板编译器
-        * 模板编译器的资源配给处置方案
-        * 模板编译器的跨平台CAPI
+    * xml模板编译器
+    * 模板编译器的资源配给处置方案
+    * 模板编译器的跨平台CAPI
 * 关于前端web扩展机制：
-        * 可扩展web模块系统
-        * web模块打包系统
-        * web模块协作框架
+    * 可扩展web模块系统
+    * web模块打包系统
+    * web模块协作框架
 
+
+### 接下来
+
+* [web模块协作框架] (javascript:ReadMore('catzillar/web_module_collab_framework.md?lang=cn'))
 
 ## Catzillar名字的由来
-身为作者，会有一些特权：取名便是其中之一~
+身为作者，会有一些特权：取名便是其中之一 :)
 
 Catzillar中文曰“猫斯拉”。是我家的一只猫咪。黑白相间，幼年横行霸道。其时像极了动画片_What’s Mike_里的反派 “猫斯拉”。因此得名。谁知她长大后，性情变得温顺害羞，其灵气、听话和迎合主人方面甚至都快赶上了狗。
 
-(**另一只叫“小乖”的猫咪，性情一直内敛恬淡，从小与猫斯拉一同长大。但因肾衰竭于2016年年末病逝。特此纪念**)。
+(另一只叫“小乖”的猫咪，性情一直内敛恬淡，从小与猫斯拉一同长大。但因肾衰竭于2016年年末病逝。特此纪念)。

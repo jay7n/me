@@ -23,8 +23,8 @@ function main() {
                 router: Router.Create(),
             })
 
-            let rootPath = app.$router.currentRoute.fullPath
-
+            let rootPath = '/app.html'
+            let historyStack = 0
 
             window.ReadMore = function ReadMore(mdLink) {
             // for safari restriction's sake, audio playing behavior HAS TO stay here ( a click callback function)
@@ -38,7 +38,10 @@ function main() {
                             scrollTop
                         })
                         app.$router.push({
-                            path
+                            path,
+                            query: {
+                                stack: ++historyStack
+                            }
                         })
                     })
             }

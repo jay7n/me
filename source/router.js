@@ -16,7 +16,8 @@ export const MDRouteQueue = Object.create({
     truncateAndpush({scrollTop}) {
         this.history = this.history.slice(0, this.depth)
         this.history.push({
-            scrollTop
+            scrollTop,
+            historyLength: window.history.length
         })
     },
     go() {
@@ -121,8 +122,8 @@ export const Router = Object.create({
                 return
             }
 
-            const depthTo = without(to.fullPath.split('/'), '').length
-            const depthFrom = without(from.fullPath.split('/'), '').length
+            const depthTo = to.query.stack || 0
+            const depthFrom = from.query.stack || 0
 
             if (depthTo > depthFrom) { // a push move
                 MDRouteQueue.go()
