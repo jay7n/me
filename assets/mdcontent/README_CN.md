@@ -1,8 +1,8 @@
 # 李又春
 
 ## 我
-李又春，自给英文名 Jayson Li,  
-生于1985年1月9日，  
+李又春，自给英文名 Jayson Li,
+生于1985年1月9日，
 现居上海,
 8年开发经验。
 
@@ -13,11 +13,11 @@
 
 
 ## 教育状况
-* 湖南理工学院  本科 学士，  
+* 湖南理工学院  本科 学士，
   _于2009年7月毕业_
 
 * 外语证书：
-    * 雅思（学术类）总成绩：6.5  
+    * 雅思（学术类）总成绩：6.5
       _于2015年8月获得_
 
 
@@ -42,7 +42,7 @@
 ___注：点击下文中的[阅读更多...](./) 能获得更详尽的信息，但因精力有限，只撰写了英文版本。对此诚挚抱歉。___
 
 #### 在Autodesk的3ds Max团队： 在3ds Max中将Python与Maxscript脚本语言整合在一起。
-_2015.4 - 2016.2_  
+_2015.4 - 2016.2_
 _涉及到的技术：C/C++, Python, Maxscript, Scintilla editing component._
 
 * 实现了一种机制，能够让用户容易地在"脚本监听器"控件中容易地切换 python 和 maxscript 模式。这种功能支持undo/redo。
@@ -55,7 +55,7 @@ _涉及到的技术：C/C++, Python, Maxscript, Scintilla editing component._
 * 2015年8月我参加了雅思考试，获得了总分6.5的成绩。
 
 #### 在Autodesk的Game Group团队： 为Stignray游戏引擎开发编辑器。
-_2014.4 - 2015.4_  
+_2014.4 - 2015.4_
 _涉及到的技术：C#, C++, QT, Chromium-CEF, AngularJS/Bootstrap, javascript/html5/canvas/css3._
 
 * 将Autodesk的自制服务整合到Stingray编辑器中。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#stingray_adsk_1'))
@@ -69,13 +69,13 @@ _涉及到的技术：C#, C++, QT, Chromium-CEF, AngularJS/Bootstrap, javascript
 * 在这期间我保持自学英语，目标是雅思考试。
 
 #### 在Autodesk的Game Group团队：将Beast光照渲染器整合入MayaLT中。
-_2013.10 - 2014.4_  
+_2013.10 - 2014.4_
 _涉及到的技术: C++, Graphics knowledge_
 
 * 为MayaLT的Displacement Map实现了Tessellation Lighting Map。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#beast_adsk'))
 
 #### 在Autodesk的Creative Finishing团队：参与开发Flame/Smoke
-_2011.2 - 2013.10_  
+_2011.2 - 2013.10_
 _涉及到的技术: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
 
 * 修复了Flame下由“Reeler” 控件位置错乱而引发的难应付的bug。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_1'))
@@ -85,20 +85,20 @@ _涉及到的技术: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
 * 实现了Flame下的 <a href="https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/Flame/files/GUID-0E1E86A5-310B-4F1F-A9C1-97E64A896AAB-htm.html" target="_blank" __> Action Replica Node </a>_ [阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_3'))
 
 #### 在IN-FUN游戏公司的3D研发团队，开发3D手机游戏。
-_2010.10 - 2011.2_  
+_2010.10 - 2011.2_
 _涉及到技术: C Language, a 3D game engine made in-house, Graphics knowledge._
 
-* 开发一款运行在MTK手机平台上的3D游戏。[阅读更多...](https://github.com/jay7n/abouthim/blob/master/WORKEXP.md#3d_infun)
+* 开发一款运行在MTK手机平台上的3D游戏。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#3d_infun'))
 
 #### 在神雪公司的客户端团队，参与开发网游。
-_2010.4 - 2010.10_  
+_2010.4 - 2010.10_
 _涉及到的技术: C++, Ogre 3D._
 
 * 参与3D游戏功能开发。
 * 对不起，时间过去太久，有点记不清了 :(
 
 #### 在联众公司的3D研发团队，新兵营训练。
-_2009.7 - 2010.4_  
+_2009.7 - 2010.4_
 _涉及到的技术: C++, Ogre 3D._
 
 * 修复bugs, 接触Ogre 3D，同时也学习图形学知识。
