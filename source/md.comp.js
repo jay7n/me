@@ -39,7 +39,7 @@ const MdComp = {
         return {
             dataLang: 'en',
             cnLang: false,
-            html: '',
+            html: '<div>ffff</div>',
             htmlReady: false,
             transitionKey: 0,
             changeSource: null,
@@ -49,13 +49,11 @@ const MdComp = {
         xMdEnRes() {
             return this.mdEnRes ? {
                 url: this.mdEnRes,
-                scrollHeight: -1,
             } : null
         },
         xMdCnRes() {
             return this.mdCnRes ? {
                 url: this.mdCnRes,
-                scrollHeight: -1,
             } : null
         },
         xCNLang() {
@@ -103,20 +101,14 @@ const MdComp = {
                 })
         },
         updateScrollHeight() {
-            const mdRes = this.getMdRes()
-            if (mdRes.scrollHeight == -1 && this.html != '') {
-                mdRes.scrollHeight = this.$el.scrollHeight
-            }
-            if (mdRes.scrollHeight != -1 && this.onScrollHeightUpdated) {
-                window.parent.postMessage({
-                    type: 'onMarkdownContentScrollHeightUpdated',
-                    height: mdRes.scrollHeight
-                }, '*')
+            window.parent.postMessage({
+                type: 'onMarkdownContentScrollHeightUpdated',
+                height: this.$el.scrollHeight
+            }, '*')
 
-                if (this.changeSource != 'lang') {
-                    this.onScrollHeightUpdated()
-                    this.changeSource = null // reset
-                }
+            if (this.changeSource != 'lang') {
+                this.onScrollHeightUpdated()
+                this.changeSource = null // reset
             }
         },
         getLoadingHtml() {
@@ -129,11 +121,24 @@ const MdComp = {
         },
         enterTransition() {
             // this is damn saving my life
+            // calling updateScrollHeight() at this hook can adjust the outside window scrollTop
+            // (through onScrollHeightUpdated() delegation in updateScrollHeight func)
+            // before transitin finished, then can prevent a suddenly-jumping-jagging effect when back-forward history move
             this.updateScrollHeight()
         }
     },
     mounted() {
-        this.renderHtml().then(this.updateScrollHeight)
+        this.renderHtml()
+    },
+    updated() {
+        // there is no such an way found to know when v-html will be rendered ready.
+        // so I have to add a poll to detect it
+        const intervalID = window.setInterval(() => {
+            if (this.$refs.mdhtml.innerText) {
+                this.updateScrollHeight()
+                window.clearInterval(intervalID)
+            }
+        }, 1000)
     },
 }
 

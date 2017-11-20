@@ -42,7 +42,7 @@ _helloworld.tmpl.xml_
   <action name="example">
     trace("hello world")
   </action>
-</rp_tmpl>    
+</rp_tmpl>
 ```
 
 `<rp_tmpl>`是一个可以被Catzillar模板编译器读取识别的特殊标签。配以`name`的标签属性，即表示要定义一个模板。`rp_tmpl`标签的字面含义是：**r**ay **p**ano _ **t** e **mpl** ate。
@@ -95,6 +95,10 @@ _client.out.xml_
 ### 接下来
 
 * [web模块协作框架] (javascript:ReadMore('catzillar/web_module_collab_framework.md?lang=cn'))
+* [作为模板模块作者](javascript:ReadMore('catzillar/web_module_framework_as_author.md?lang=cn'))
+* [作为模板模块使用者](javascript:ReadMore('catzillar/web_module_framework_as_user.md?lang=cn'))
+* [web模块打包系统](javascript:ReadMore('catzillar/web_module_bundling_mechanism.md?lang=cn'))
+* [web模块生命期以及WebPano对象](javascript:ReadMore('catzillar/web_modle_lifecycle_and_WebPano_obj.md?lang=cn'))
 
 ## Catzillar名字的由来
 身为作者，会有一些特权：取名便是其中之一 :)
