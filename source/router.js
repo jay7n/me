@@ -2,7 +2,7 @@ import Vue from 'vue.es'
 import VueRouter from 'vue-router.es'
 
 import MarkDownComp from '@/md.comp'
-import { underPath, getELementByATagName, without } from '@/utils/methods'
+import { underPath, getELementByATagName } from '@/utils/methods'
 
 Vue.use(VueRouter)
 

@@ -1,16 +1,23 @@
 import URI from 'urijs'
 import showdown from 'showdown'
+import hljs from 'highlightjs'
+import htmlCoder from 'html-encoder-decoder'
+
 import 'whatwg-fetch'
 
 import { appRoot } from '@/utils/consts'
 
 import pageturnWav from 'r/pageturn.wav'
 
+import 'md.syntax.styles/agate.css'
+
 function _markdownAssetToHtml(mdUrl) {
     return fetch(mdUrl)
         .then(response => response.text())
         .then(mdContent => {
-            const mdConverter = new showdown.Converter()
+            const mdConverter = new showdown.Converter({
+                extensions: [showdownHighlight]
+            })
             mdConverter.setFlavor('github')
             const htmlContent = mdConverter.makeHtml(mdContent)
             return htmlContent
@@ -112,6 +119,7 @@ export function parseLoactoinHref(href) {
     }
 }
 
+/* close this method for now cuz at the moment no place uses it
 export function without(array, ...excludedValues) {
     const resArray = array.slice(0)
 
@@ -125,4 +133,26 @@ export function without(array, ...excludedValues) {
     }
 
     return resArray
+}
+*/
+
+export function showdownHighlight() {
+    //modified from https://github.com/Bloggify/showdown-highlight
+    // mainly add a 'hljs' class for <pre> tag
+
+    return [{
+        type: 'output',
+        filter: (text) => {
+            const left = "<pre><code\\b[^>]*>",
+                right = "</code></pre>",
+                flags = "g",
+                replacement = function replacement(wholeMatch, match, left, right) {
+                    match = htmlCoder.decode(match)
+                    const leftWithClass = left.replace('<pre>', '<pre class="hljs">')
+                    return leftWithClass + hljs.highlightAuto(match).value + right
+                }
+
+            return showdown.helper.replaceRecursiveRegExp(text, replacement, left, right, flags)
+        }
+    }]
 }

@@ -1,10 +1,7 @@
 import Vue from 'vue.es'
 import ToggleButton from 'vue-js-toggle-button'
-import hljs from 'highlightjs'
-import $ from 'jquery'
 
 import { markdownAssetToHtml, pageTurningAudio } from '@/utils/methods'
-import 'md.syntax.styles/agate.css'
 
 Vue.use(ToggleButton)
 
@@ -24,7 +21,7 @@ const MdComp = {
                     <button>download</button>
                 </div>
                 <transition name="fade" mode="out-in" @enter="enterTransition">
-                    <div :key="transitionKey" id="md" :class="mdClass" v-html="html"></div>
+                    <div ref="mdhtml" :key="transitionKey" id="md" :class="mdClass" v-html="html"></div>
                 </transition>
             </div>
             <div v-else>
@@ -103,11 +100,6 @@ const MdComp = {
                 .then((html) => {
                     this.html = html
                     this.htmlReady = true
-                })
-                .then(() => {
-                    $('pre').each(function(i, block) {
-                        hljs.highlightBlock(block)
-                    })
                 })
         },
         updateScrollHeight() {
