@@ -105,21 +105,20 @@ const MdComp = {
                     this.htmlReady = true
                 })
                 .then(() => {
-                    $(document).ready(function() {
-                        $('pre').each(function(i, block) {
-                            hljs.highlightBlock(block)
-                        })
+                    $('pre').each(function(i, block) {
+                        hljs.highlightBlock(block)
                     })
                 })
         },
         updateScrollHeight() {
-            if (this.getMdRes().scrollHeight == -1 && this.html != '') {
-                this.getMdRes().scrollHeight = this.$el.scrollHeight
+            const mdRes = this.getMdRes()
+            if (mdRes.scrollHeight == -1 && this.html != '') {
+                mdRes.scrollHeight = this.$el.scrollHeight
             }
-            if (this.getMdRes().scrollHeight != -1 && this.onScrollHeightUpdated) {
+            if (mdRes.scrollHeight != -1 && this.onScrollHeightUpdated) {
                 window.parent.postMessage({
                     type: 'onMarkdownContentScrollHeightUpdated',
-                    height: this.getMdRes().scrollHeight
+                    height: mdRes.scrollHeight
                 }, '*')
 
                 if (this.changeSource != 'lang') {
