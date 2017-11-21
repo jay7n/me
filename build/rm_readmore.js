@@ -10,6 +10,7 @@ function _rmReadmoreInFile(path) {
     let content = fse.readFileSync(path).toString()
     content = content.replace(/\[Read more\s?\.\.\.\]\(.+\)/g, '')
     content = content.replace(/\[阅读更多\s?\.\.\.\]\(.+\)/g, '')
+    content =  content + '\n\n**Visit _http://me.liyo.site_ to know more about me**\n\n'
     fse.writeFileSync(path, content)
 }
 

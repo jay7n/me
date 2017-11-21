@@ -49,9 +49,14 @@ const routes = [
             let props = {}
             if (route.path == '/app.html') {
                 props = {
-                    mdEnRes: underPath.assets('mdcontent/README.md'),
-                    mdCnRes: underPath.assets('mdcontent/README_CN.md'),
-                    showDownload: true,
+                    mdEnRes: {
+                        md: underPath.assets('mdcontent/README.md'),
+                        pdf: underPath.assets('resume_en.pdf'),
+                    },
+                    mdCnRes: {
+                        md: underPath.assets('mdcontent/README_CN.md'),
+                        pdf: underPath.assets('resume_cn.pdf'),
+                    },
                 }
             } else {
                 let mdResKey = ''
@@ -61,7 +66,10 @@ const routes = [
                     mdResKey = 'mdEnRes'
                 }
                 props = {
-                    [mdResKey]: underPath.assets(`mdcontent/${route.params.url}`),
+                    [mdResKey]: {
+                        md: underPath.assets(`mdcontent/${route.params.url}`),
+                        pdf: null,
+                    }
                 }
             }
 
@@ -77,7 +85,6 @@ const routes = [
                         scrollTop = current.scrollTop
                         relativeScroll = false
                     } else if(route.hash){
-                        window.getTag = getELementByATagName
                         const $hash = getELementByATagName(route.hash.substr(1))
                         scrollTop = $hash.offsetTop
                     }

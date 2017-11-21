@@ -68,3 +68,9 @@ pre {
     /* -webkit-overflow-scrolling: this attribute is very important to safari mobile browsers to display code with scrolling */
     -webkit-overflow-scrolling: touch;
 }
+
+#img-pdf-icon {
+    height: 32.6px;
+    margin-top: -4px;
+    cursor: pointer;
+}

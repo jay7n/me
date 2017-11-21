@@ -2,6 +2,7 @@ import Vue from 'vue.es'
 import ToggleButton from 'vue-js-toggle-button'
 
 import { markdownAssetToHtml, pageTurningAudio } from '@/utils/methods'
+import ImgPdfIcon from '@/resources/pdf_icon.png'
 
 Vue.use(ToggleButton)
 
@@ -18,9 +19,8 @@ const MdComp = {
                         :width="65" :height="28.6"
                         @change="pageTurn"
                     />
-                    <div v-if="showDownload">
-                        <button v-if="cnLang">下载</button>
-                        <button v-else>download</button>
+                    <div v-if="getMdRes().url.pdf">
+                        <img id="img-pdf-icon" :src="ImgPdfIcon" @click="onPdfClicked"></button>
                     </div>
                 </div>
                 <transition name="fade" mode="out-in" @enter="enterTransition">
@@ -32,12 +32,18 @@ const MdComp = {
             </div>
         `,
     props: {
-        mdEnRes: String,
-        mdCnRes: String,
+        /*
+            mdEnRes / mdCnRes : {
+                md: path[String],
+                pdf: path[String]
+            }
+        }
+         */
+        mdEnRes: Object,
+        mdCnRes: Object,
         lang: String,
         hash: String,
         onScrollHeightUpdated: Function,
-        showDownload: false,
     },
     data() {
         return {
@@ -47,6 +53,7 @@ const MdComp = {
             htmlReady: false,
             transitionKey: 0,
             changeSource: null,
+            ImgPdfIcon,
         }
     },
     computed: {
@@ -98,7 +105,7 @@ const MdComp = {
         },
         renderHtml() {
             this.htmlReady = false
-            return markdownAssetToHtml(this.getMdRes().url)
+            return markdownAssetToHtml(this.getMdRes().url.md)
                 .then((html) => {
                     this.html = html
                     this.htmlReady = true
@@ -129,7 +136,10 @@ const MdComp = {
             // (through onScrollHeightUpdated() delegation in updateScrollHeight func)
             // before transitin finished, then can prevent a suddenly-jumping-jagging effect when back-forward history move
             this.updateScrollHeight()
-        }
+        },
+        onPdfClicked() {
+            window.open(this.getMdRes().url.pdf, '_blank')
+        },
     },
     mounted() {
         this.renderHtml()

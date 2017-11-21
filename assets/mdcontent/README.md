@@ -45,7 +45,7 @@ And, a little more about EXPERTISE EXPERIENCES:
 _2017.7 - now_
 _Tech involved: Javascript(ES6), WebGL, PlayCanvas, Webpack, Graphics_
 
-* Integrate 3D Effect/Data from in-house 3D Engine RayVR to <a href="https://playcanvas.com/" target="_blank">PlayCanvas</a> [Read more ...](javascript:ReadMore('WORKEXP.md?lang=en#wgl-rayion-1'))
+* Integrate 3D Effect/Data from in-house 3D Engine RayVR to <a href="https://playcanvas.com/" target="_blank">PlayCanvas</a>. [Read more ...](javascript:ReadMore('WORKEXP.md?lang=en#wgl_rayion_1'))
 
 #### Created in-house Framework "Catzillar" (based on KRPano) to fulfill Panorama Functionality for web browsing purpose, Frontend Team, Rayion Tech Startup.
 _2016.4 - 2017.7_

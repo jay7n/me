@@ -44,7 +44,7 @@ ___注：点击下文中的 能获得更详尽的信息，但因精力有限，�
 _2017.7 - now_
 _涉及到的技术: Javascript(ES6), WebGL, PlayCanvas, Webpack, Graphics knowledge_
 
-* 负责内部自研桌面端3D引擎RayVR与PlayCanvas的3D效果/数据到PlayCanvas引擎的导出转换。
+* 负责内部自研桌面端3D引擎RayVR与<a href="https://playcanvas.com/" target="_blank">PlayCanvas</a>的3D效果/数据到PlayCanvas引擎的导出转换。
 
 ### 在锐扬科技创业公司的前端团队：建立基于KRPano的内部框架“Catzillar”, 以此实现浏览器漫游目的的全景图功能。
 _2016.4 - 2017.7_
