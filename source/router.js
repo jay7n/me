@@ -51,6 +51,7 @@ const routes = [
                 props = {
                     mdEnRes: underPath.assets('mdcontent/README.md'),
                     mdCnRes: underPath.assets('mdcontent/README_CN.md'),
+                    showDownload: true,
                 }
             } else {
                 let mdResKey = ''

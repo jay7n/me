@@ -18,7 +18,10 @@ const MdComp = {
                         :width="65" :height="28.6"
                         @change="pageTurn"
                     />
-                    <button>download</button>
+                    <div v-if="showDownload">
+                        <button v-if="cnLang">下载</button>
+                        <button v-else>download</button>
+                    </div>
                 </div>
                 <transition name="fade" mode="out-in" @enter="enterTransition">
                     <div ref="mdhtml" :key="transitionKey" id="md" :class="mdClass" v-html="html"></div>
@@ -34,6 +37,7 @@ const MdComp = {
         lang: String,
         hash: String,
         onScrollHeightUpdated: Function,
+        showDownload: false,
     },
     data() {
         return {
