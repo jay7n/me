@@ -108,7 +108,7 @@ export const Router = Object.create({
             if (!outsideLocation.consumed) {
                 outsideLocation.consumed = true
                 next({
-                    path: outsideLocation.doublehash
+                    path: outsideLocation.doublemark
                 })
             }
 

@@ -62,3 +62,9 @@ html, body {
 .fade-enter, .fade-leave-to  {
   opacity: 0
 }
+
+pre {
+    width: 100vw;
+    /* -webkit-overflow-scrolling: this attribute is very important to safari mobile browsers to display code with scrolling */
+    -webkit-overflow-scrolling: touch;
+}

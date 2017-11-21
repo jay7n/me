@@ -43,7 +43,7 @@ const MdComp = {
         return {
             dataLang: 'en',
             cnLang: false,
-            html: '<div>ffff</div>',
+            html: '<div></div>',
             htmlReady: false,
             transitionKey: 0,
             changeSource: null,

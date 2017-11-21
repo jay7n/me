@@ -5,7 +5,7 @@ import htmlCoder from 'html-encoder-decoder'
 
 import 'whatwg-fetch'
 
-import { appRoot } from '@/utils/consts'
+import { appRoot, doublemark } from '@/utils/consts'
 
 import pageturnWav from 'r/pageturn.wav'
 
@@ -109,12 +109,12 @@ export function crossFrameGetPostMessage(messageType, receivedMessageType) {
 }
 
 export function parseLoactoinHref(href) {
-    const pair = href.split('##')
+    const pair = href.split(doublemark)
 
     return {
         href,
         origin: pair[0],
-        doublehash: pair[1],
+        doublemark: pair[1],
         consumed: false
     }
 }

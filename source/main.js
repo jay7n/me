@@ -1,6 +1,7 @@
 import Vue from 'vue.es'
 
 import { pageTurningAudio, crossFrameGetPostMessage, parseLoactoinHref } from '@/utils/methods'
+import { doublemark } from '@/utils/consts'
 import {Router, MDRouteQueue} from '@/router'
 
 import '@/style.css'
@@ -51,7 +52,7 @@ function main() {
             }
 
             window.ReadMoreInBlank = function ReadMoreInBlank(mdLink) {
-                const path = `${window.location.origin}##${rootPath}/${mdLink}`
+                const path = `${window.location.origin}${doublemark}${rootPath}/${mdLink}`
                 window.open(path, '_blank')
             }
         })
