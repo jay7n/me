@@ -4,6 +4,7 @@ const path = require('path')
 const chalk = require('chalk')
 const opn = require('opn')
 const parseArgs = require('minimist')
+const { exec } = require('child_process')
 const _ = require('lodash')
 
 const Conf = require('../config/conf')
@@ -12,6 +13,10 @@ const webpackConfig = require('../config/webpack/prod.conf')
 
 function _build_prod() {
     return new Promise((resolve, reject) => {
+        const p = exec(`node ${path.join(__dirname, 'rm_readmore.js')}`)
+        p.stdout.on('data', (data) => console.log(chalk.green(data)))
+        p.stderr.on('data', (data) => console.log(chalk.yellow(data)))
+
         webpack(webpackConfig, function(err, stats) {
             if (err) reject(err)
 
