@@ -39,7 +39,7 @@
 
 
 ## 工作经验
-___注：点击下文中的[阅读更多...](./) 能获得更详尽的信息，但因精力有限，只撰写了英文版本。对此诚挚抱歉。___
+___注：点击下文中的 能获得更详尽的信息，但因精力有限，只撰写了英文版本。对此诚挚抱歉。___
 ### 在锐扬科技创业公司的前端团队：探索实践基于Web的3D游戏引擎PlayCanvas。
 _2017.7 - now_
 _涉及到的技术: Javascript(ES6), WebGL, PlayCanvas, Webpack, Graphics knowledge_
@@ -50,18 +50,18 @@ _涉及到的技术: Javascript(ES6), WebGL, PlayCanvas, Webpack, Graphics knowl
 _2016.4 - 2017.7_
 _涉及到的技术：Javascript(ES6), React, Redux, Webpack, Lua, C/C++, KRPano_
 
-* 创建和维护内部框架[Catzillar](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn'))(作者)，该框架用于更方便地生成强大灵活的全景图网站前端，同时也用于内部3D桌面端引擎“RayVR”关于全景图功能的转换导出。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#cat_rayion_1'))
+* 创建和维护内部框架[Catzillar](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn'))(作者)，该框架用于更方便地生成强大灵活的全景图网站前端，同时也用于内部3D桌面端引擎“RayVR”关于全景图功能的转换导出。
 
-* 作为全景图前端团队队长管理开发任务(基于敏捷流程)，并利用**Catzillar**框架开发了一系列全景图网站工程。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#cat_rayion_2'))
+* 作为全景图前端团队队长管理开发任务(基于敏捷流程)，并利用**Catzillar**框架开发了一系列全景图网站工程。
 
 #### 在Autodesk的3ds Max团队： 在3ds Max中将Python与Maxscript脚本语言整合在一起。
 _2015.4 - 2016.2_
 _涉及到的技术：C/C++, Python, Maxscript, Scintilla editing component._
 
 * 实现了一种机制，能够让用户容易地在"脚本监听器"控件中容易地切换 python 和 maxscript 模式。这种功能支持undo/redo。
-[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_1')
 
-* 利用Python的"with-yield"语句， 将_Maxscript_的["Context Expressions"](http://help.autodesk.com/view/3DSMAX/2016/ENU/?guid=__files_GUID_E672728A_EE15_4197_9EDD_487781167B01_htm) 转换成_Python_下的对应物。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_2'))
+
+* 利用Python的"with-yield"语句， 将_Maxscript_的["Context Expressions"](http://help.autodesk.com/view/3DSMAX/2016/ENU/?guid=__files_GUID_E672728A_EE15_4197_9EDD_487781167B01_htm) 转换成_Python_下的对应物。
 
 另外，
 
@@ -71,11 +71,11 @@ _涉及到的技术：C/C++, Python, Maxscript, Scintilla editing component._
 _2014.4 - 2015.4_
 _涉及到的技术：C#, C++, QT, Chromium-CEF, AngularJS/Bootstrap, javascript/html5/canvas/css3._
 
-* 将Autodesk的自制服务整合到Stingray编辑器中。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#stingray_adsk_1'))
+* 将Autodesk的自制服务整合到Stingray编辑器中。
 
-* 为Stingray编辑器实现了_进度条_控件。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#stingray_adsk_2'))
+* 为Stingray编辑器实现了_进度条_控件。
 
-* 为Stingray编辑器实现了_颜色选取器_控件。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#stingray_adsk_3'))
+* 为Stingray编辑器实现了_颜色选取器_控件。
 
 另外，
 
@@ -85,23 +85,23 @@ _涉及到的技术：C#, C++, QT, Chromium-CEF, AngularJS/Bootstrap, javascript
 _2013.10 - 2014.4_
 _涉及到的技术: C++, Graphics knowledge_
 
-* 为MayaLT的Displacement Map实现了Tessellation Lighting Map。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#beast_adsk'))
+* 为MayaLT的Displacement Map实现了Tessellation Lighting Map。
 
 #### 在Autodesk的Creative Finishing团队：参与开发Flame/Smoke
 _2011.2 - 2013.10_
 _涉及到的技术: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
 
-* 修复了Flame下由“Reeler” 控件位置错乱而引发的难应付的bug。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_1'))
+* 修复了Flame下由“Reeler” 控件位置错乱而引发的难应付的bug。
 
-* 调查了一个Flame下内存管理的问题。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_2'))
+* 调查了一个Flame下内存管理的问题。
 
-* 实现了Flame下的 <a href="https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/Flame/files/GUID-0E1E86A5-310B-4F1F-A9C1-97E64A896AAB-htm.html" target="_blank" __> Action Replica Node </a>_ [阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_3'))
+* 实现了Flame下的 <a href="https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/Flame/files/GUID-0E1E86A5-310B-4F1F-A9C1-97E64A896AAB-htm.html" target="_blank" __> Action Replica Node </a>_ 
 
 #### 在IN-FUN游戏公司的3D研发团队，开发3D手机游戏。
 _2010.10 - 2011.2_
 _涉及到技术: C Language, a 3D game engine made in-house, Graphics knowledge._
 
-* 开发一款运行在MTK手机平台上的3D游戏。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#3d_infun'))
+* 开发一款运行在MTK手机平台上的3D游戏。
 
 #### 在神雪公司的客户端团队，参与开发网游。
 _2010.4 - 2010.10_
@@ -140,3 +140,7 @@ _涉及到的技术: C++, Ogre 3D._
     * <a href="http://ipn.li/" target="_blank" __> IPN </a>,
     * <a href="http://xkcd.com/" target="_blank" __> xkcd </a>.
 * 爱好：健身，尤克里里/鼓，后摇音乐, 发呆, 城市压马路，煮咖啡。
+
+
+**Visit _http://me.liyo.site_ to know more about me**
+

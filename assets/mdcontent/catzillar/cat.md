@@ -98,7 +98,7 @@ _client.out.xml_
 * [作为模板模块作者](javascript:ReadMore('catzillar/web_module_framework_as_author.md?lang=cn'))
 * [作为模板模块使用者](javascript:ReadMore('catzillar/web_module_framework_as_user.md?lang=cn'))
 * [web模块打包系统](javascript:ReadMore('catzillar/web_module_bundling_mechanism.md?lang=cn'))
-* [web模块生命期以及WebPano对象](javascript:ReadMore('catzillar/web_modle_lifecycle_and_WebPano_obj.md?lang=cn'))
+* [web模块生命期以及WebPano对象](javascript:ReadMore('catzillar/web_module_lifecycle_and_webpano_obj.md?lang=cn'))
 
 ## Catzillar名字的由来
 身为作者，会有一些特权：取名便是其中之一 :)

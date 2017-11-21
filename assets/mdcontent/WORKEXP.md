@@ -1,14 +1,12 @@
- <a href="" target="_blank" __>  </a>
-
-
 ## WORK EXPERIENCES
+
 #### PlayCanvas Web 3D Engine Exploring, Frontend Team, Rayion Tech Startup.
 _2017.7 - now_
 _Tech involved: Javascript(ES6), WebGL, PlayCanvas, Webpack, Graphics_
 
-* <a name="wgl-rayion-1">Integrate 3D Effect/Data from in-house 3D Engine RayVR to PlayCanvas</a>
+* Integrate 3D Effect/Data from in-house 3D Engine RayVR to <a href="https://playcanvas.com/" target="_blank">PlayCanvas</a> [Read more ...](javascript:ReadMore('WORKEXP.md?lang=en#wgl-rayion-1'))
 
-    > * Not finish yet
+    > * <a href="https://playcanvas.com/" target="_blank">PlayCanvas</a> is a 3D game engine based on WebGL, which provides a bunch of powerful rendering abilites, including Physical Base Rendering Effects. It's our one of the tech selections to export the 3D data from the in-house desktop 3D Engine "RayVR" to the web side. Given the exported data, I did the importing job into **PlayCanvas**.
 
 #### Created in-house Framework "Catzillar" (based on KRPano) to fulfill Panorama Functionality for web browsing purpose, Frontend Team, Rayion Tech Startup.
 _2016.4 - 2017.7_
@@ -17,11 +15,13 @@ _Tech involved: Javascript(ES6), React, Redux, Webpack, Lua, C/C++, KRPano_
 * <a name="cat_rayion_1">Created and maintained [Catzillar](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn')) in-house framework(as the author), which is used to create web panoramagram website easier and more powerful and flexible, as well as to bridge the panoramagram effect from in-house RayVR 3D desktop engine to the web frontend.</a>
 
     > * The initial purpose was to develop panoramagram more flexibly by utilizing <a href="https://krpano.com" target="_blank">KRPano</a>(the main means to build panoramagram website worldwide), so **Catzillar** was made as a simple XML processer built in Lua at first, used to interpret a higher abstract XML structure into the plain ones that can be recognized by KRPano.
-    > * **Catzillar** must support the use under host runtime envrionment, so that the Company's in house 3D engine RayVR can use it to export the panoramagram effect as a static website. Then **Catzillar** adds a Lua/C API layer as the bridge.
+    > * **Catzillar** needs to support the use under host runtime envrionment, so that the Company's in house 3D engine RayVR can use it to export the panoramagram effect as a static website. Then **Catzillar** adds a Lua/C API layer as the bridge.
+    > * With more product demands coming, **Catzillar** adds more complicated functions, one significant feature (and becomeing the most important one) is embedding a totally customized web module framework in the xml processer. The web module framework is build by **ES6 + React +Redux**, using **Webpack** as the bundling tool. all the web widgets and interactive behaviors are built upon this framework.
 
 * <a name="cat_rayion_2">As the frontend team lead manage the developing tasks(based on Scrum), and developed a variety of web-side panoramagram projects using in-house **Catzillar** framework. </a>
 
-    > * testtest
+    > * Runs a small Scrum Team to plan, arrage and manage the relavent panoramagram developing tasks. In addition to supporting the main RayVR engine exporting, **Catzillar** also works as an independent tool to develop other products from the customer.
+    > * Wrote a [fully explained document](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn')) to help other team members to know how **Catzillar** works.
 
 #### Python/MaxScript Integration for 3ds Max, 3ds Max Team, Autodesk.
 _2015.4 - 2016.2_

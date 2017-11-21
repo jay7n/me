@@ -1,5 +1,3 @@
-<a href="" target="_blank" __>  </a>
-
 # web模块打包系统
 
 ## 关于打包（Bundling）和转码（Transforming）
