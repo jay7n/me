@@ -38,8 +38,24 @@
 * 日常使用 _Fish + Atom 编辑器 + Git_ 作为日常使用的工具链。
 
 
+## 作品
+
+
 ## 工作经验
 ___注：点击下文中的[阅读更多...](./) 能获得更详尽的信息，但因精力有限，只撰写了英文版本。对此诚挚抱歉。___
+### 在锐扬科技创业公司的前端团队：探索实践基于Web的3D游戏引擎PlayCanvas。
+_2017.7 - now_
+_涉及到的技术: Javascript(ES6), WebGL, PlayCanvas, Webpack, Graphics knowledge_
+
+* 负责内部自研桌面端3D引擎RayVR与PlayCanvas的3D效果/数据到PlayCanvas引擎的导出转换。
+
+### 在锐扬科技创业公司的前端团队：建立基于KRPano的内部框架“Catzillar”, 以此实现浏览器漫游目的的全景图功能。
+_2016.4 - 2017.7_
+_涉及到的技术：Javascript(ES6), React, Redux, Webpack, Lua, C/C++, KRPano_
+
+* 创建和维护内部框架[Catzillar](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn'))(作者)，该框架用于更方便地生成强大灵活的全景图网站前端，同时也用于内部3D桌面端引擎“RayVR”关于全景图功能的转换导出。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#cat_rayion_1'))
+
+* 作为全景图前端团队队长管理开发任务(基于敏捷流程)，并利用**Catzillar**框架开发了一系列全景图网站工程。[阅读更多...](javascript:ReadMore('WORKEXP.md?lang=en#cat_rayion_2'))
 
 #### 在Autodesk的3ds Max团队： 在3ds Max中将Python与Maxscript脚本语言整合在一起。
 _2015.4 - 2016.2_
@@ -112,14 +128,9 @@ _涉及到的技术: C++, Ogre 3D._
     * 作为一名小组长领导一个小的任务团队。并/或
     * 一次能够在海外工作/居留的机会。并/或
     * 偏计算机工程向的开发，比如：
-        * 内存配置策略
-        * 性能提升
-        * 计算任务的调度
-        * 并行/并发
+        * 内存配置策略, 性能提升, 计算任务的调度, 并行/并发
     * 并/或 能够接触一或多种对我而言新的语言，如下：
-        * Go
-        * Lisp
-        * Ruby
+        * Go, Lisp, Ruby
 
 
 ## 偏好

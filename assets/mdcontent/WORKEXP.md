@@ -2,8 +2,29 @@
 
 
 ## WORK EXPERIENCES
+#### PlayCanvas Web 3D Engine Exploring, Frontend Team, Rayion Tech Startup.
+_2017.7 - now_
+_Tech involved: Javascript(ES6), WebGL, PlayCanvas, Webpack, Graphics_
+
+* <a name="wgl-rayion-1">Integrate 3D Effect/Data from in-house 3D Engine RayVR to PlayCanvas</a>
+
+    > * Not finish yet
+
+#### Created in-house Framework "Catzillar" (based on KRPano) to fulfill Panorama Functionality for web browsing purpose, Frontend Team, Rayion Tech Startup.
+_2016.4 - 2017.7_
+_Tech involved: Javascript(ES6), React, Redux, Webpack, Lua, C/C++, KRPano_
+
+* <a name="cat_rayion_1">Created and maintained [Catzillar](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn')) in-house framework(as the author), which is used to create web panoramagram website easier and more powerful and flexible, as well as to bridge the panoramagram effect from in-house RayVR 3D desktop engine to the web frontend.</a>
+
+    > * The initial purpose was to develop panoramagram more flexibly by utilizing <a href="https://krpano.com" target="_blank">KRPano</a>(the main means to build panoramagram website worldwide), so **Catzillar** was made as a simple XML processer built in Lua at first, used to interpret a higher abstract XML structure into the plain ones that can be recognized by KRPano.
+    > * **Catzillar** must support the use under host runtime envrionment, so that the Company's in house 3D engine RayVR can use it to export the panoramagram effect as a static website. Then **Catzillar** adds a Lua/C API layer as the bridge.
+
+* <a name="cat_rayion_2">As the frontend team lead manage the developing tasks(based on Scrum), and developed a variety of web-side panoramagram projects using in-house **Catzillar** framework. </a>
+
+    > * testtest
+
 #### Python/MaxScript Integration for 3ds Max, 3ds Max Team, Autodesk.
-_2015.4 - 2016.2_  
+_2015.4 - 2016.2_
 _Tech involved: C/C++, Python, Maxscript, Scintilla editing component._
 
 * <a name="3dsmax_adsk_1">Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported.</a>
@@ -21,7 +42,7 @@ And,
 * I took the IELTS exam in Aug, 2015 and gained a overall band score of 6.5.
 
 #### Stingray Editor Development for Stingray game engine, Game Group Team, Autodesk.
-_2014.4 - 2015.4_  
+_2014.4 - 2015.4_
 _Tech involved: C#, C++, QT, Chromium-CEF, AngularJS/Bootstrap, javascript/html5/canvas/css3._
 
 * <a name="stingray_adsk_1">Integrated Autodesk in-house products to Stingray Editor.</a>
@@ -47,7 +68,7 @@ And,
 * During this stage I've been learning English by myself, targeting IELTS.
 
 #### Beast Lighting Renderer Integration for MayaLT, Game Group Team, Autodesk.
-_2013.10 - 2014.4_  
+_2013.10 - 2014.4_
 _Tech involved: C++, Graphics knowledge_
 
 * <a name="beast_adsk">Implemented Tessellation Lighting Map for Displacement Map of MayaLT.</a>
@@ -58,7 +79,7 @@ _Tech involved: C++, Graphics knowledge_
     > * My improvement for such was to store points using _indices way_ instead, meaning we can save a lot spaces hence. The difficult point was how to produce an appropriate normal for each new-tessellated points.
 
 #### Feature Development for Flame/Smoke, Creative Finishing Team, Autodesk.
-_2011.2 - 2013.10_  
+_2011.2 - 2013.10_
 _Tech involved: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
 
 * <a name="flame_adsk_1">Fixed a series of tangled bugs resulting from "Reeler" UI positioning bias of Flame.</a>
@@ -77,7 +98,7 @@ _Tech involved: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
     > * The point here was the code base of Flame/Smoke didn't design for such a feature from stem to stern.I had to modify the very underlying architecture so as to extend such a basis. After that all the instances managed by _Replica Node_ share one geometry structure and only other higher level nodes (like position, rotation, scales) upon it differ with each other by offset argument.The underlying geometry structure contain a countable pointer (similar to shared_ptr) with them to manage the life-time when needed to cope with _Replica Node_.
 
 #### 3D Feature Devel for Mobile Games, 3D R&D Team, IN-FUN Corp.
-_2010.10 - 2011.2_  
+_2010.10 - 2011.2_
 _Tech involved: C Language, a 3D game engine made in-house, Graphics knowledge._
 * <a name="3d_infun">Developed a lightweight 3D game running on a MTK mobile platform.</a>
 
@@ -85,14 +106,14 @@ _Tech involved: C Language, a 3D game engine made in-house, Graphics knowledge._
 
 
 #### Feature Devel for NetGames, Client-side Team, ShenXue Corp.
-_2010.4 - 2010.10_  
+_2010.4 - 2010.10_
 _Tech involved: C++, Ogre 3D._
 
 * Attended 3D game logic development.
 * Sorry I can't recall too much details since so a long time has passed :(
 
 #### Boot Camp Training, 3D R&D Team, Ourgame Corp.
-_2009.7 - 2010.4_  
+_2009.7 - 2010.4_
 _Tech involved: C++, Ogre 3D._
 
 * Fixed bugs, touched Ogre 3D as well as general graphics knowledge.

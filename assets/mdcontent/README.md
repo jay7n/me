@@ -3,9 +3,9 @@
 # YOUCHUN LI
 
 ## ABOUT ME
-Youchun Li, (or Jayson Li in English),  
-was born on Jan 9th, 1985,  
-and lives in Shanghai, China,  
+Youchun Li, (or Jayson Li in English),
+was born on Jan 9th, 1985,
+and lives in Shanghai, China,
 with 8 years developing experiences.
 
 * <a href="http://blog.liyo.site" target="_blank" __> blog.liyo.site </a>
@@ -15,13 +15,13 @@ with 8 years developing experiences.
 
 
 ## EDUCATION
-* Bachelor of Computer Since and Technology,  
+* Bachelor of Computer Since and Technology,
   <a href="http://www.hnist.cn" target="_blank" __> Hunan Institute Of Science And Technology </a>
   _graduated in Jun, 2009_
 
 * Language Certificate:
-    * IELTS (Academic) Overall Band Score: 6.5  
-      _obtained in Aug, 2015._  
+    * IELTS (Academic) Overall Band Score: 6.5
+      _obtained in Aug, 2015._
 
 
 
@@ -42,25 +42,29 @@ And, a little more about EXPERTISE EXPERIENCES:
 * Uses _Fish + Atom editor(with vim plugin) + Git_ as developing toolchains.
 
 
+## WORKS
+
+
 ## WORK EXPERIENCES
-#### PlayCanvas Web 3D Engine Exploring; Integration with in-house 3D Engine RayVR, Frontend Team, Rayion Tech Startup.
-_2017.7 - now_  
+#### PlayCanvas Web 3D Engine Exploring, Frontend Team, Rayion Tech Startup.
+_2017.7 - now_
 _Tech involved: Javascript(ES6), WebGL, PlayCanvas, Webpack, Graphics_
 
-* TEST
+* Integrate 3D Effect/Data from in-house 3D Engine RayVR to PlayCanvas [Read More ...](javascript:ReadMore('WORKEXP.md?lang=en#wgl-rayion-1'))
 
-####  Created Catzillar Framework (based on KRPano) to fulfill Panorama Functionality for web browsing purpose, Frontend Team, Rayion Tech Startup.
-_2016.4 - 2017.6_  
-_Tech involved: Javascript(ES6), React, Redux, Lua, Webpack, KRPano_
+#### Created in-house Framework "Catzillar" (based on KRPano) to fulfill Panorama Functionality for web browsing purpose, Frontend Team, Rayion Tech Startup.
+_2016.4 - 2017.7_
+_Tech involved: Javascript(ES6), React, Redux, Webpack, Lua, C/C++, KRPano_
 
-* Test
+* Created and maintained [Catzillar](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn')) in-house framework(as the author), which is used to create web panoramagram website easier and more powerful and flexible, as well as to bridge the panoramagram effect from in-house RayVR 3D desktop engine to the web frontend. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#cat_rayion_1'))
+
+* As the frontend team lead manage the developing tasks(based on Scrum), and developed a variety of web-side panoramagram projects using in-house **Catzillar** framework. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#cat_rayion_2'))
 
 #### Python/MaxScript Integration for 3ds Max, 3ds Max Team, Autodesk.
-_2015.4 - 2016.2_  
+_2015.4 - 2016.2_
 _Tech involved: C/C++, Python, Maxscript, Scintilla editing component._
 
-* Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMoreInBlank('catzillar/cat.md?lang=cn'))
-* Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMoreInBlank('WORKEXP.md?lang=en#3dsmax_adsk_1'))
+* Implemented a mechanism on its "script listener" UI that allows the user to switch between _python_ and _maxscript_ modes easily. undo/redo feature supported. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_1'))
 
 * Translated _Maxscript_'s <a href="http://help.autodesk.com/view/3DSMAX/2016/ENU/?guid=__files_GUID_E672728A_EE15_4197_9EDD_487781167B01_htm" target="_blank"> "Context Expressions" </a> to the _Python_'s counterpart using its "with-yield" statement. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3dsmax_adsk_2'))
 
@@ -69,7 +73,7 @@ And,
 * I took the IELTS exam in Aug, 2015 and gained a overall band score of 6.5.
 
 #### Stingray Editor Development for Stingray game engine, Game Group Team, Autodesk.
-_2014.4 - 2015.4_  
+_2014.4 - 2015.4_
 _Tech involved: C#, C++, QT, Chromium-CEF, AngularJS/Bootstrap, javascript/html5/canvas/css3._
 
 * Integrated Autodesk in-house services to Stingray Editor. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#stingray_adsk_1'))
@@ -83,13 +87,13 @@ And,
 * During this stage I kept learning English by myself, targeting IELTS.
 
 #### Beast Lighting Renderer Integration for MayaLT, Game Group Team, Autodesk.
-_2013.10 - 2014.4_  
+_2013.10 - 2014.4_
 _Tech involved: C++, Graphics knowledge_
 
 * Implemented Tessellation Lighting Map for Displacement Map of MayaLT. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#beast_adsk'))
 
 #### Feature Development for Flame/Smoke, Creative Finishing Team, Autodesk.
-_2011.2 - 2013.10_  
+_2011.2 - 2013.10_
 _Tech involved: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
 
 * Fixed a series of tangled bugs resulting from "Reeler" Widget positioning bias of Flame. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_1'))
@@ -99,20 +103,20 @@ _Tech involved: C++, Scons, gdb, Linux devel platform, Graphics knowledge_
 * Implemented _<a href="https://knowledge.autodesk.com/search-result/caas/CloudHelp/cloudhelp/2016/ENU/Flame/files/GUID-0E1E86A5-310B-4F1F-A9C1-97E64A896AAB-htm.html" target="_blank" __> Action Replica Node </a>_ for Flame. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#flame_adsk_3'))
 
 #### 3D Feature Devel for Mobile Games, 3D R&D Team, IN-FUN Corp.
-_2010.10 - 2011.2_  
+_2010.10 - 2011.2_
 _Tech involved: C Language, a 3D game engine made in-house, Graphics knowledge._
 
 * Developed a lightweight 3D game running on a MTK mobile platform. [Read more...](javascript:ReadMore('WORKEXP.md?lang=en#3d_infun'))
 
 #### Feature Devel for NetGames, Client-side Team, ShenXue Corp.
-_2010.4 - 2010.10_  
+_2010.4 - 2010.10_
 _Tech involved: C++, Ogre 3D._
 
 * Attended 3D game feature development.
 * Sorry I can't recall too much details since so a long time has passed :(
 
 #### Boot Camp Training, 3D R&D Team, Ourgame Corp.
-_2009.7 - 2010.4_  
+_2009.7 - 2010.4_
 _Tech involved: C++, Ogre 3D._
 
 * Fixed bugs, touched Ogre 3D as well as general graphics knowledge.
@@ -126,14 +130,9 @@ _Tech involved: C++, Ogre 3D._
     * As a team lead runs a small scrum team. and/or
     * An opportunity working/living aboard. and/or
     * Engineer-Oriented devel, such like:
-        * memory allocation.
-        * performance improvement.
-        * computing job/task scheduling.
-        * parallel/concurrency.
+        * memory allocation. performance improvement. computing job/task scheduling. parallel/concurrency.
     * And/or could touch one or more new languages(to me) below:
-        * Go
-        * Lisp
-        * Ruby
+        * Go, Lisp, Ruby
 
 
 ## TASTE
